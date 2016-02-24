@@ -1,0 +1,21 @@
+/**
+ * Header
+ */
+
+.site-header {
+	position:relative;
+}
+
+.home-link {
+	position:absolute;
+	left:$spacing-unit*2;
+	top:$spacing-unit*2;
+	z-index:10;
+	transition: none;
+	background-image:url('/images/icons/home-white.svg');
+	background-image:url('/images/icons/home-yellow.svg');
+
+	&:hover, &:active {
+		background-image:url('/images/icons/home-white.svg');
+	}
+}

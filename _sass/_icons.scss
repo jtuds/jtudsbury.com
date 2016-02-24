@@ -1,0 +1,27 @@
+/**
+ * Icons
+ */
+
+.icon {
+	display:inline-block;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+.icon--home {
+	width:42px;
+	height:42px;
+	background-image:url('/images/icons/home.svg');
+}
+
+.icon--home-white {
+	width:42px;
+	height:42px;
+	background-image:url('/images/icons/home-white.svg');
+}
+
+.icon--home-yellow {
+	width:42px;
+	height:42px;
+	background-image:url('/images/icons/home-yellow.svg');
+}

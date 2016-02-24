@@ -1,11 +1,11 @@
 ---
 layout: page
-title: About me
-permalink: /about-me/
-custom_name: about
+title: Portfolio
+permalink: /portfolio/
+custom_name: portfolio
 ---
 
-About me!
+Portfolio!
 
 You can find the source code for the Jekyll new theme at:
 {% include icon-github.html username="jglovier" %} /

@@ -1,0 +1,42 @@
+/**
+ * Primary nav
+ */
+
+.site-nav {
+	border-bottom:3px solid $palette-yellow;
+	margin-bottom: $spacing-unit;
+	text-align: center;
+}
+
+.site-nav__link {
+	position: relative;
+	display:inline-block;
+	color: $text-color;
+	width:25%;
+	padding-top:$spacing-unit*2;
+	padding-bottom:$spacing-unit*2;
+	text-transform: uppercase;
+	font-size:16px;
+	font-weight:$medium-font-weight;;
+
+	&:hover {
+		text-decoration: none;
+		color:$text-color;
+
+		&:after {
+			height:100%;
+			transition:height 0.4s;
+		}
+	}
+
+	&:after {
+		content:"";
+		position: absolute;
+		left:0;
+		bottom:0;
+		width:100%;
+		height:0;
+		background-color: $palette-yellow;
+		z-index:-1;
+	}
+}
