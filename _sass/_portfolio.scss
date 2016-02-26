@@ -20,7 +20,7 @@
 
 	&:hover, &:focus {
 
-		.portfolio-card__title {
+		.portfolio-card__link-title {
 			transform: translateY(0);
 			transition: all 0.3s;
 		}
@@ -30,13 +30,17 @@
 			transition: all 0.3s;
 		}
 	}
+
+	&.portfolio-card__screenshot-wrap--disabled {
+		cursor:default;
+	}
 }
 
 .portfolio-card__screenshot {
 	border-radius:$radius;
 }
 
-.portfolio-card__title {
+.portfolio-card__link-title {
 	position: absolute;
 	bottom:0;
 	width:100%;

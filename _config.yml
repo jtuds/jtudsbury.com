@@ -16,3 +16,5 @@ github_username:  jtuds
 
 # Build settings
 markdown: kramdown
+
+include: ['_portfolio']

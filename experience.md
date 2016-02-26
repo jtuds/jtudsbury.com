@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Experience
 permalink: /experience/
 custom_name: experience

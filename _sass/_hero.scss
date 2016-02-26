@@ -29,7 +29,7 @@
 	color:white;
 	text-align: left;
 	width:100%;
-	font-size:62px;
+	font-size:54px;
 	font-weight: $bold-font-weight;
 	line-height: normal;
 	text-shadow:1px 1px 1px rgba(black, .6);
@@ -69,6 +69,10 @@
 			}
 		}
 	}
+}
+
+.hero__text--large {
+	font-size:62px;
 }
 
 @keyframes rotateWord {

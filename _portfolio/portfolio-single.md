@@ -1,11 +1,11 @@
 ---
-layout: page
-title: Portfolio
-permalink: /portfolio/
-custom_name: portfolio
+layout: single
+title: Portfolio single
+permalink: /portfolio/portfolio-single/
+custom_name: portfolio-single
 ---
 
-Portfolio!
+Portfolio single!
 
 You can find the source code for the Jekyll new theme at:
 {% include icon-github.html username="jglovier" %} /

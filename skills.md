@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Skills
 permalink: /skills/
 custom_name: skills

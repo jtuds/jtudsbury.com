@@ -8,7 +8,7 @@
 
     <div class="hero__text-wrapper">
       <div class="wrapper">
-        <h1 class="hero__text">James Tudsbury
+        <h1 class="hero__text{% if page.custom_name == 'home' %} hero__text--large{% endif %}">James Tudsbury
           <div class="rotating-words">
             <span>Front end developer<span class="visuallyhidden">, </span></span>
             <span>Backend dabbler<span class="visuallyhidden">, </span></span>
@@ -23,8 +23,14 @@
 
   </div><!--/.hero -->
 
-  <nav class="site-nav">
-    <a class="site-nav__link" href="{{ site.url }}/about-me">About me</a><a class="site-nav__link" href="{{ site.url }}/portfolio">Portfolio</a><a class="site-nav__link" href="{{ site.url }}/skills">Skills</a><a class="site-nav__link" href="{{ site.url }}/experience">Experience</a>
-  </nav>
+  {% if page.custom_name == 'home' %}
+    <nav class="site-nav">
+      <a class="site-nav__link" href="{{ site.url }}/about-me">About me</a><a class="site-nav__link" href="{{ site.url }}/portfolio">Portfolio</a><a class="site-nav__link" href="{{ site.url }}/skills">Skills</a><a class="site-nav__link" href="{{ site.url }}/experience">Experience</a><a class="site-nav__link" href="{{ site.url }}/contact">Contact</a>
+    </nav>
+  {% else %}
+    <nav class="site-nav">
+      <a class="site-nav__link" href="{{ site.url }}/about-me">Back to home</a>
+    </nav>
+  {% endif %}
 
 </header>
