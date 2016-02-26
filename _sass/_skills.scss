@@ -1,0 +1,22 @@
+/**
+ * Skills
+ */
+
+.skills-list {
+
+	.primary-skill__heading {
+		font-size:20px;
+		color:$palette-green;
+	}
+}
+
+.skills-list__secondaries {
+	display:flex;
+	flex-wrap:wrap;
+
+	> li {
+		width:25%;
+		list-style-position: inside;
+		padding-right: $spacing-unit;
+	}
+}

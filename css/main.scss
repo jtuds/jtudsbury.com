@@ -9,8 +9,9 @@
 $base-font-family: 'Hind', sans-serif;
 $secondary-font-family: 'Work Sans', sans-serif;
 $base-font-size:   16px;
-$base-font-weight: 400;
+$base-font-weight: 300;
 $light-font-weight: 300;
+$semibold-font-weight: 500;
 $medium-font-weight: 600;
 $bold-font-weight: 700;
 $small-font-size:  $base-font-size * 0.875;
@@ -34,37 +35,40 @@ $palette-pink: #E28ACF;
 $palette-green: #74CF99;
 $palette-red: #CF7A74;
 
+$radius: 2px;
+
 // Width of the content area
 $content-width:    1020px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
+// Breakpoints
+$lap-start:         481px;
+$desk-narrow-start: 960px;
+$desk-start:        1024px;
+$desk-wide-start:   1280px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "mixins",
         "base",
         "syntax-highlighting",
+        "grids",
+        "widths",
         "helpers",
+        "lists",
         "hero",
         "nav",
         "icons",
         "header",
-        "headings"
+        "headings",
+        "panels",
+        "slick",
+        "portfolio",
+        "skills",
+        "experience",
+        "contact",
+        "footer"
 ;

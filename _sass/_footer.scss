@@ -1,0 +1,16 @@
+/**
+ * Footer
+ */
+
+.site-footer {
+	padding-top:$spacing-unit;
+	padding-bottom:$spacing-unit;
+	font-size:14px;
+	background-color:$text-color;
+	color:white;
+
+	a {
+		color:white;
+		text-decoration: underline;
+	}
+}

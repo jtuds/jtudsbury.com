@@ -1,0 +1,35 @@
+/**
+ * Panels
+ */
+
+.panel {
+	padding-top:$spacing-unit*5;
+	padding-bottom:$spacing-unit*5;
+}
+
+.panel--normal + .panel--normal {
+	padding-top:0;
+}
+
+.panel--divider {
+
+	&:after {
+		content:"";
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:$spacing-unit*5;
+		width:20%;
+		height:4px;
+		background-color:$palette-red;
+	}
+}
+
+.panel--background-green {
+	background-color:$palette-green;
+	color:white;
+}
+
+.panel__intro {
+	margin-bottom: $spacing-unit*2.5;
+}

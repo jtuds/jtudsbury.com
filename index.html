@@ -6,15 +6,21 @@ custom_name: home
 
 <div class="home">
 
-  <div class="wrapper">
-    <h1>About</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div><!--/.wrapper -->
+  {% include panels/about.html %}
+
+  {% include panels/portfolio.html %}
+
+  {% include panels/skills.html %}
+
+  {% include panels/experience.html %}
 
   <div class="panel">
-    <div class="wrapper">
-      <p>Want this to be an include of a portfolio slider (owl carousel or slick).</p>
-    </div><!--/.wrapper -->
-  </div><!--/.panel -->
+  	<div class="wrapper">
+  		<img class="contact__image" src="{{ site.url }}/images/strangers-quote.jpg" alt="There are no strangers here, only friends who haven't yet met.">
+  		<h1>Contact me</h1>
+  		<p>You can find me occassionally tweeting, and more often retweeting the wisdom of others, at <a href="https://twitter.com/@jtuds">@jtuds</a></p>
+  		<p>The best way to get in touch with me directly is via email at <a href="mailto:james@jtudsbury.com">james@jtudsbury.com</a></p>
+  	</div><!--/.wrapper -->
+  </div>
 
 </div>

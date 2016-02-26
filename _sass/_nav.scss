@@ -3,8 +3,7 @@
  */
 
 .site-nav {
-	border-bottom:3px solid $palette-yellow;
-	margin-bottom: $spacing-unit*2;
+	border-bottom:4px solid $palette-red;
 	text-align: center;
 }
 
@@ -21,7 +20,7 @@
 
 	&:hover {
 		text-decoration: none;
-		color:$text-color;
+		color:white;
 
 		&:after {
 			height:100%;
@@ -36,7 +35,7 @@
 		bottom:0;
 		width:100%;
 		height:0;
-		background-color: $palette-yellow;
+		background-color: $palette-red;
 		z-index:-1;
 	}
 }

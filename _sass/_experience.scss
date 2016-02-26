@@ -1,0 +1,38 @@
+/**
+ * Experience
+ */
+
+.experience__title {
+	line-height:1;
+	margin-bottom: 0;
+}
+
+.experience__role {
+	font-size:18px;
+	font-weight:$semibold-font-weight;
+}
+
+.experience__external-link {
+	color:white;
+	
+	&:hover, &:focus {
+		color:$link-color;
+		text-decoration: none;
+
+		&:after {
+			background-image:url('/images/icons/external-blue.svg');
+		}
+	}
+
+	&:after {
+		content:"";
+		width:24px;
+		height:24px;
+		display:inline-block;
+		margin-left:$spacing-unit;
+		vertical-align: text-top;
+		background-repeat: no-repeat;
+		background-size:cover;
+		background-image:url('/images/icons/external-white.svg');
+	}
+}
