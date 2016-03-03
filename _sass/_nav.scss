@@ -3,8 +3,15 @@
  */
 
 .site-nav {
-	border-bottom:4px solid $palette-red;
 	text-align: center;
+
+	&:not(.site-nav--footer) {
+		border-bottom:4px solid $palette-red;
+	}
+}
+
+.site-nav--footer {
+	border-top:4px solid $palette-red;
 }
 
 .site-nav__link {
@@ -37,5 +44,9 @@
 		height:0;
 		background-color: $palette-red;
 		z-index:-1;
+	}
+
+	.site-nav--footer &:after {
+		top:0;
 	}
 }

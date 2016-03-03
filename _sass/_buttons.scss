@@ -1,0 +1,129 @@
+/**
+ * 
+ */
+
+.btn{
+    display:inline-block;       /* [1] */
+    vertical-align:middle;      /* [2] */
+    white-space:nowrap;         /* [3] */
+    font-family:inherit;        /* [4] */
+    font-size:100%;             /* [4] */
+    cursor:pointer;             /* [5] */
+    border:none;                /* [6] */
+    margin:0;                   /* [6] */
+    padding-top:   0;           /* [6] */
+    padding-bottom:0;           /* [6] */
+    line-height:3;              /* [7] */
+    padding-right:1em;          /* [7] */
+    padding-left: 1em;          /* [7] */
+    border-radius:$radius; /* [8] */
+}
+
+.btn{
+
+    &,
+    &:hover{
+        text-decoration:none;   /* [9] */
+    }
+
+    &:active,
+    &:focus{
+        outline:none;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $SIZES
+\*------------------------------------*/
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+.btn--small{
+    padding-right:0.5em;
+    padding-left: 0.5em;
+    line-height:2;
+}
+
+.btn--large{
+    padding-right:1.5em;
+    padding-left: 1.5em;
+    line-height:4;
+}
+
+.btn--huge{
+    padding-right:2em;
+    padding-left: 2em;
+    line-height:5;
+}
+
+/**
+ * These buttons will fill the entirety of their container.
+ *
+ * 1. Remove padding so that widths and paddings don’t conflict.
+ */
+.btn--full{
+    width:100%;
+    padding-right:0;            /* [1] */
+    padding-left: 0;            /* [1] */
+    text-align:center;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Button font-size modifiers.
+ */
+.btn--alpha{
+    font-size:3rem;
+}
+
+.btn--beta{
+    font-size:2rem;
+}
+
+.btn--gamma{
+    font-size:1rem;
+}
+
+/**
+ * Make the button inherit sizing from its parent.
+ */
+.btn--natural{
+    vertical-align:baseline;
+    font-size:inherit;
+    line-height:inherit;
+    padding-right:0.5em;
+    padding-left: 0.5em;
+}
+
+.btn--default {
+    background-color:$link-color;
+    color:white;
+}
+
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}

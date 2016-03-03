@@ -25,7 +25,7 @@ $brand-color:      #5289C5;
 $link-color:	   $brand-color;
 
 $grey-color:       #cacac6;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color-light: lighten($grey-color, 15%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Palette
@@ -58,6 +58,7 @@ $desk-wide-start:   1280px;
         "grids",
         "widths",
         "helpers",
+        "buttons",
         "lists",
         "hero",
         "nav",

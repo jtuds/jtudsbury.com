@@ -1,0 +1,75 @@
+---
+layout: single
+title: John Ryan By Design
+permalink: /portfolio/john-ryan-by-design/
+custom_name: john-ryan-by-design
+category: portfolio
+---
+
+Built and designed at <a href="https://candidsky.com">Candidsky</a>. Go to <a href="http://factory-beds-direct.co.uk">John Ryan By Design</a>.
+
+John Ryan By Design is a bespoke bed retailer with a large customer base, active online customer discussions/questions and a source of information about beds, most notably mattresses.
+
+The requirement was to build a website that improved the customer experience when buying a mattress online and to harness the vast amount of content created from blog articles and customer questions and answers.
+
+The website consisted of an ecommerce area, some standard templates such as a contact page, a question and answer section, and a knowledge base.
+
+<figure class="portfolio__figure portfolio__figure--screenshot">
+	<img src="{{ site-url }}/images/screenshots/jrbd/homepage.jpg" data-gif="{{ site-url }}/images/screen-gifs/jrbd/jrbd.gif">
+	<button class="portfolio__figure__gif-trigger">View GIF (890 KB)</button>
+	<figcaption>The John Ryan By Design front end.</figcaption>
+</figure>
+
+<h2>My contributions</h2>
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">CSS / SASS</h3>
+	<p>My key responsibility for this project was to write the CSS using SASS to style the front end using designs provided by the designer I worked with. These designs were provided as a mix of full page mockups and component styles, such as headings and buttons, allowing me to interpret the designs to style pages without the designer having to mock up every single template. This approach meant there was some room to interpret the designs and implement some of my own design decisions where specific decisions had not been made by the designer. This process would finish with a review and some feedback / alterations from the designer.</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/jrbd/css.png">
+		<figcaption>A sample of SASS taken from the project. I try to comment my code in detail and consistently so that myself and future developers can use it easily.</figcaption>
+	</figure>
+	<p>As this was quite a large site the architecture and naming styles of the CSS were an important feature and these are areas of CSS authoring that can often be neglected, despite their importance, as they can go unnoticed by stakeholders until it is too late. Making the website look like the designs was a goal that would please the client and on the face of it, go a long way to getting the site ready for launch. However I put in significant consideration in to the structure and class naming of the CSS so that future development was as painless as I could make it. This meant careful consideration of class names choosing abstract over specific where possible, separation of SASS files, allowing for reusable classes where appropriate, but being specific where such classes could actually cause issues, detailed commenting (see figure above) and use of SASS functions such as variables (which were carefully named), amongst other things.</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/jrbd/css-2.png">
+		<figcaption>An example demonstrating the use of SASS variables to help with style consistency, the BEM syntax for more specific styling and deliberate use of the child selector for specific element styling.</figcaption>
+	</figure>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">PHP</h3>
+	<p>The nature of this project, particularly the customisation to Woocommerce that was required, along with the heavy usage of Advanced Custom Fields for content management, meant that there was a lot of PHP functionality. I worked with a backend developer on this project and with that support I was able to assist with PHP tasks and in many cases complete them alone, allowing the backend developer to focus on the most complex backend challenges of the project.</p>
+	<p>The main area I worked on was the functionality of the templates. This meant writing the logic to output the correct markup based on things such as admin options/content and areas of the site, e.g. different markup for different taxonomies.</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/jrbd/php.png">
+		<figcaption>Some PHP functionality that checks whether the current page is a product filter and then queries and outputs a description accordingly.</figcaption>
+	</figure>
+	<p>Along with backend tasks that blur in to the frontend, such as the templating tasks mentioned, I also worked on some functions which could be considered entirely backend. These functions ranged from things like looping through items and updating their data in a database to an image rewrite helper that fetched images from our test server when my local development URL was detected (so that I didn't need to copy over hundreds of images).</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/jrbd/php-2.png">
+		<figcaption>Looping through a Wordpress custom post type and conditionally updating some post meta.</figcaption>
+	</figure>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Javascript</h3>
+	<p>Javascript was used throughout the site to add some basic functionality, most often to aid the user experience. I was responsible for the majority of this code and was allowed to dictate much of how the functionality and/or interactions were implemented. Some of this functionality was a case of initiating a plugin with the chosen settings for the scenario it was used for, though there was some small custom functions written such as for the navigation and for choosing product attributes.</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/jrbd/dabber.png">
+		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/jrbd/dabber.gif">
+		<figcaption>Changing text and active states using a data attribute and input fields.</figcaption>
+	</figure>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/jrbd/panels-js.png">
+		<figcaption>Showing a back to top button once the user has scrolled past a specified position.</figcaption>
+	</figure>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Content management</h3>
+	<p>A high level of content management was required for this project. The client required the ability to be able to edit large areas of the site. This meant they could do things such as choose which product categories to show on the homepage, which questions to show (if any), which product information tables to show, and to edit content on and arrange product information panels. This fucntionality was built with the help of Advanced Custom Fields.</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/jrbd/acf.png">
+		<figcaption>An Advanced Custom Fields field used to add a header, text and a table by referencing the post object of a Wordpress table plugin.</figcaption>
+	</figure>
+</div><!--/.portfolio__skill -->

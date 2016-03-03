@@ -9,6 +9,12 @@
 
 .experience__role {
 	font-size:18px;
+	margin-bottom:0;
+	font-weight:$semibold-font-weight;
+}
+
+.experience__length {
+	line-height:1;
 	font-weight:$semibold-font-weight;
 }
 
