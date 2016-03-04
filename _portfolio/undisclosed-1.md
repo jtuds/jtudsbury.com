@@ -12,7 +12,7 @@ For various reasons, work on this project stopped at the design stage. Before th
 
 <figure class="portfolio__figure portfolio__figure--screenshot">
 	<img src="{{ site-url }}/images/screenshots/undisclosed-1/undisclosed-proto.jpg">
-	<figcaption>The homepage prototype</figcaption>
+	<figcaption>The homepage prototype.</figcaption>
 </figure>
 
 <h2>My contributions</h2>

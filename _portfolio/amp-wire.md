@@ -16,8 +16,8 @@ The website also needed the option to order products as is or to customise them,
 
 <figure class="portfolio__figure portfolio__figure--screenshot">
 	<img src="{{ site-url }}/images/screenshots/ampwire/homepage.jpg" data-gif="{{ site-url }}/images/screen-gifs/ampwire/ampwire.gif">
-	<button class="portfolio__figure__gif-trigger">View GIF (890 KB)</button>
-	<figcaption>The AMP Wire front end</figcaption>
+	<button class="portfolio__figure__gif-trigger">View GIF (724 KB)</button>
+	<figcaption>The AMP Wire front end.</figcaption>
 </figure>
 
 <h2>My contributions</h2>

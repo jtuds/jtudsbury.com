@@ -16,8 +16,8 @@ The website consisted of a products area, giving each product it's own page, a s
 
 <figure class="portfolio__figure portfolio__figure--screenshot">
 	<img src="{{ site-url }}/images/screenshots/englishlakes/homepage.jpg" data-gif="{{ site-url }}/images/screen-gifs/englishlakes/englishlakes.gif">
-	<button class="portfolio__figure__gif-trigger">View GIF (890 KB)</button>
-	<figcaption>The English Lakes front end</figcaption>
+	<button class="portfolio__figure__gif-trigger">View GIF (860 KB)</button>
+	<figcaption>The English Lakes front end.</figcaption>
 </figure>
 
 <h2>My contributions</h2>
