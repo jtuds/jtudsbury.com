@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>John Ryan By Design | Portfolio of James Tudsbury, Manchester based web developer</title>
+  <meta name="description" content="Portfolio of Manchester based front end web developer James Tudsbury.">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700|Hind:300,500' rel='stylesheet' type='text/css'>
+  <link rel="canonical" href="http://127.0.0.1:4000/portfolio/john-ryan-by-design/">
+  <link rel="alternate" type="application/rss+xml" title="James Tudsbury - Web Developer" href="http://127.0.0.1:4000/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  
+    <a class="icon icon--home-yellow home-link" href="http://127.0.0.1:4000"><span class="visuallyhidden">Home</span></a>
+  
+
+  <div class="hero">
+
+    <div class="hero__text-wrapper">
+      <div class="wrapper">
+        <h1 class="hero__text">James Tudsbury
+          <div class="rotating-words">
+            <span>Front end developer<span class="visuallyhidden">, </span></span>
+            <span>Backend dabbler<span class="visuallyhidden">, </span></span>
+            <span>User behaviour enthusiast<span class="visuallyhidden">, </span></span>
+            <span>Designer<span class="visuallyhidden">, </span></span>
+            <span>Web lover<span class="visuallyhidden">, </span></span>
+            <span>Mountain jumper<span class="visuallyhidden">.</span></span>
+          </div>
+        </h1>
+      </div><!--/.wrapper -->
+    </div><!--/.hero__text-wrapper -->
+
+  </div><!--/.hero -->
+
+  
+    <div class="site-nav-wrapper">
+      <nav class="site-nav site-nav--single">
+        <a class="site-nav__link" href="http://127.0.0.1:4000/">Back to home</a>
+      </nav>
+    </div><!--/.site-nav-wrapper -->
+  
+
+</header>
+
+
+    <div class="page-content">
+      <article class="post">
+
+	<div class="panel">
+		<div class="wrapper">
+			<header class="post-header">
+				<h1 class="post-title">John Ryan By Design</h1>
+			</header>
+			<p>Built and designed at <a href="https://candidsky.com">Candidsky</a>. Go to <a href="http://factory-beds-direct.co.uk">John Ryan By Design</a>.</p>
+
+<p>John Ryan By Design is a bespoke bed retailer with a large customer base, active online customer discussions/questions and a source of information about beds, most notably mattresses.</p>
+
+<p>The requirement was to build a website that improved the customer experience when buying a mattress online and to harness the vast amount of content created from blog articles and customer questions and answers.</p>
+
+<p>The website consisted of an ecommerce area, some standard templates such as a contact page, a question and answer section, and a knowledge base.</p>
+
+<figure class="portfolio__figure portfolio__figure--screenshot">
+	<img src="/images/screenshots/jrbd/homepage.jpg" data-gif="/images/screen-gifs/jrbd/jrbd.gif" />
+	<button class="portfolio__figure__gif-trigger">View GIF (890 KB)</button>
+	<figcaption>The John Ryan By Design front end.</figcaption>
+</figure>
+
+<h2>My contributions</h2>
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading" id="csssass">CSS / SASS</h3>
+	<p>My key responsibility for this project was to write the CSS using SASS to style the front end using designs provided by the designer I worked with. These designs were provided as a mix of full page mockups and component styles, such as headings and buttons, allowing me to interpret the designs to style pages without the designer having to mock up every single template. This approach meant there was some room to interpret the designs and implement some of my own design decisions where specific decisions had not been made by the designer. This process would finish with a review and some feedback / alterations from the designer.</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="/images/screenshots/jrbd/css.png" />
+		<figcaption>A sample of SASS taken from the project. I try to comment my code in detail and consistently so that myself and future developers can use it easily.</figcaption>
+	</figure>
+	<p>As this was quite a large site the architecture and naming styles of the CSS were an important feature and these are areas of CSS authoring that can often be neglected, despite their importance, as they can go unnoticed by stakeholders until it is too late. Making the website look like the designs was a goal that would please the client and on the face of it, go a long way to getting the site ready for launch. However I put in significant consideration in to the structure and class naming of the CSS so that future development was as painless as I could make it. This meant careful consideration of class names choosing abstract over specific where possible, separation of SASS files, allowing for reusable classes where appropriate, but being specific where such classes could actually cause issues, detailed commenting (see figure above) and use of SASS functions such as variables (which were carefully named), amongst other things.</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="/images/screenshots/jrbd/css-2.png" />
+		<figcaption>An example demonstrating the use of SASS variables to help with style consistency, the BEM syntax for more specific styling and deliberate use of the child selector for specific element styling.</figcaption>
+	</figure>
+</div>
+<!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading" id="php">PHP</h3>
+	<p>The nature of this project, particularly the customisation to Woocommerce that was required, along with the heavy usage of Advanced Custom Fields for content management, meant that there was a lot of PHP functionality. I worked with a backend developer on this project and with that support I was able to assist with PHP tasks and in many cases complete them alone, allowing the backend developer to focus on the most complex backend challenges of the project.</p>
+	<p>The main area I worked on was the functionality of the templates. This meant writing the logic to output the correct markup based on things such as admin options/content and areas of the site, e.g. different markup for different taxonomies.</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="/images/screenshots/jrbd/php.png" />
+		<figcaption>Some PHP functionality that checks whether the current page is a product filter and then queries and outputs a description accordingly.</figcaption>
+	</figure>
+	<p>Along with backend tasks that blur in to the frontend, such as the templating tasks mentioned, I also worked on some functions which could be considered entirely backend. These functions ranged from things like looping through items and updating their data in a database to an image rewrite helper that fetched images from our test server when my local development URL was detected (so that I didn't need to copy over hundreds of images).</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="/images/screenshots/jrbd/php-2.png" />
+		<figcaption>Looping through a Wordpress custom post type and conditionally updating some post meta.</figcaption>
+	</figure>
+</div>
+<!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Javascript</h3>
+	<p>Javascript was used throughout the site to add some basic functionality, most often to aid the user experience. I was responsible for the majority of this code and was allowed to dictate much of how the functionality and/or interactions were implemented. Some of this functionality was a case of initiating a plugin with the chosen settings for the scenario it was used for, though there was some small custom functions written such as for the navigation and for choosing product attributes.</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="/images/screenshots/jrbd/dabber.png" />
+		<img class="portfolio__screenshot" src="/images/screenshots/jrbd/dabber.gif" />
+		<figcaption>Changing text and active states using a data attribute and input fields.</figcaption>
+	</figure>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="/images/screenshots/jrbd/panels-js.png" />
+		<figcaption>Showing a back to top button once the user has scrolled past a specified position.</figcaption>
+	</figure>
+</div>
+<!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Content management</h3>
+	<p>A high level of content management was required for this project. The client required the ability to be able to edit large areas of the site. This meant they could do things such as choose which product categories to show on the homepage, which questions to show (if any), which product information tables to show, and to edit content on and arrange product information panels. This fucntionality was built with the help of Advanced Custom Fields.</p>
+	<figure class="portfolio__figure portfolio__figure--screenshot">
+		<img class="portfolio__screenshot" src="/images/screenshots/jrbd/acf.png" />
+		<figcaption>An Advanced Custom Fields field used to add a header, text and a table by referencing the post object of a Wordpress table plugin.</figcaption>
+	</figure>
+</div>
+<!--/.portfolio__skill -->
+
+
+		</div><!--/.wrapper -->
+  	</div><!--/.panel -->
+
+</article>
+
+    </div>
+
+    
+  <nav class="site-nav site-nav--footer">
+      <a class="site-nav__link" href="#">Back to top</a><a class="site-nav__link" href="http://127.0.0.1:4000/">Back to home</a>
+    </nav>
+
+
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <p>Email: <a href="mailto:james@jtudsbury.com">james@jtudsbury.com</a> | Twitter: <a href="https://twitter.com/@jtuds">@jtuds</a> | Icons by <a href="http://www.freepik.com" title="Freepik">Freepik</a> and <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="http://127.0.0.1:4000/js/single.js"></script>
+
+
+  </body>
+
+</html>
