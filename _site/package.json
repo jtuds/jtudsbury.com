@@ -1,0 +1,11 @@
+{
+  "name": "jekyll-portfolio-site",
+  "version": "0.1.0",
+  "description": "jtudsbury.com Jekyll site",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "grunt-contrib-cssmin": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.0",
+    "grunt-postcss": "^0.8.0"
+  }
+}

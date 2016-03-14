@@ -18,7 +18,3 @@ github_username:  jtuds
 markdown: kramdown
 
 include: ['_portfolio', '_experience']
-
-gems:
-  - octopress-autoprefixer
-  - jekyll-assets
