@@ -18,3 +18,5 @@ github_username:  jtuds
 markdown: kramdown
 
 include: ['_portfolio', '_experience']
+
+exclude: ['node_modules']
