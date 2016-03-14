@@ -8,14 +8,31 @@
 	width:100%;
 	background-image: url('/images/hero.jpg');
 	background-size:100%;
+	background-repeat: no-repeat;
 	background-position: 0;
 	height:300px;
 	height:50vh;
+
+	@media (max-width:$desk-narrow-start) {
+		height:40vh;
+	}
+
+	@media (max-width:680px) {
+		background-size:cover;
+	}
 }
 
 .hero--large {
 	height:500px;
 	height:100vh;
+
+	@media (max-width:$desk-narrow-start) {
+		height:70vh;
+	}
+
+	@media (max-width:$lap-start) {
+		height:40vh;
+	}
 }
 
 .hero__text-wrapper {
@@ -33,6 +50,18 @@
 	font-weight: $bold-font-weight;
 	line-height: normal;
 	text-shadow:1px 1px 1px rgba(black, .6);
+
+	@media (max-width:$desk-narrow-start) {
+		font-size:42px;
+	}
+
+	@media (max-width:$bp-extra-a) {
+		font-size:34px;
+	}
+
+	@media (max-width:$lap-start) {
+		font-size:30px;
+	}
 
 	.rotating-words {
 		display:block;
@@ -73,6 +102,18 @@
 
 .hero__text--large {
 	font-size:62px;
+
+	@media (max-width:$desk-narrow-start) {
+		font-size:48px;
+	}
+
+	@media (max-width:$bp-extra-a) {
+		font-size:38px;
+	}
+
+	@media (max-width:$lap-start) {
+		font-size:34px;
+	}
 }
 
 @keyframes rotateWord {

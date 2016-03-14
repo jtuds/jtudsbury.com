@@ -15,8 +15,16 @@
 	flex-wrap:wrap;
 
 	> li {
-		width:25%;
+		width:100%;
 		list-style-position: inside;
 		padding-right: $spacing-unit;
+
+		@media (min-width:$lap-start) {
+			width:50%;
+		}
+
+		@media (min-width:$desk-narrow-start) {
+			width:25%;
+		}
 	}
 }

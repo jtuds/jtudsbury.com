@@ -11,4 +11,8 @@
 	display: block;
 	border-radius:$radius;
 	box-shadow:0 1px 4px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+	@media (max-width:$bp-extra-a) {
+		width:80%;
+	}
 }

@@ -5,10 +5,18 @@
 h1, .alpha {
 	font-size:30px;
 	font-weight:$semibold-font-weight;
+
+	@media (max-width:$lap-start) {
+		font-size:26px;
+	}
 }
 
 h2, .beta {
 	font-size:26px;
+
+	@media (max-width:$lap-start) {
+		font-size:22px;
+	}
 }
 
 h2, .beta, h3, .gamma {
@@ -17,4 +25,8 @@ h2, .beta, h3, .gamma {
 
 h3, .gamma {
 	font-size:24px;
+
+	@media (max-width:$lap-start) {
+		font-size:20px;
+	}
 }

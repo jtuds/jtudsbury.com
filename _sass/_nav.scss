@@ -2,11 +2,24 @@
  * Primary nav
  */
 
+.site-nav-wrapper {
+	overflow:hidden;
+}
+
 .site-nav {
 	text-align: center;
 
 	&:not(.site-nav--footer) {
 		border-bottom:4px solid $palette-red;
+	}
+}
+
+.site-nav--home {
+
+	@media (max-width:$nav-bp) {
+		overflow-x:scroll;
+		white-space: nowrap;
+		min-width:$nav-bp + 100px;
 	}
 }
 
@@ -23,7 +36,12 @@
 	padding-top:$spacing-unit*2;
 	padding-bottom:$spacing-unit*2;
 	font-size:16px;
-	font-weight:$medium-font-weight;;
+	font-weight:$medium-font-weight;
+	white-space: nowrap;
+
+	@media (max-width:$bp-extra-a) {
+		font-size:14px;
+	}
 
 	&:hover {
 		text-decoration: none;
@@ -46,7 +64,18 @@
 		z-index:-1;
 	}
 
+	.site-nav--single &, .site-nav--footer & {
+
+		@media (max-width:$bp-extra-a) {
+			width:50%;
+		}
+	}
+
 	.site-nav--footer &:after {
 		top:0;
 	}
+}
+
+.nav-anchor:target {
+	padding-top:$spacing-unit*2;
 }

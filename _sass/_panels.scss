@@ -5,6 +5,11 @@
 .panel {
 	padding-top:$spacing-unit*5;
 	padding-bottom:$spacing-unit*5;
+
+	@media (max-width:$lap-start) {
+		padding-top:$spacing-unit*3;
+		padding-bottom:$spacing-unit*3;
+	}
 }
 
 .panel--normal + .panel--normal {
