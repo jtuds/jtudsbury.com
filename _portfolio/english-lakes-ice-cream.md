@@ -74,7 +74,7 @@ The website consisted of a products area, giving each product it's own page, a s
 </div><!--/.portfolio__skill -->
 
 <div class="portfolio__skill">
-	<h3 class="portfolio__subheading">CMS</h3>
+	<h3 class="portfolio__subheading" id="cms">CMS</h3>
 	<p>The client requested the ability to control both the content and the appearance of the site. To achieve this, the CMS was built with the common ability to edit content but also with options to apply certain styles from a defined set. For example the user could choose whether to show a content panel, upon choosing yes they would then be presented with more options; the ability to add and edit a header and text area, and to choose the background colour of the panel which would determine the foreground colours of the header and text. This gave the client the ability to control not just the content, but where the content appeared and how it appeared.</p>
 	<figure class="portfolio__figure portfolio__figure--screenshot">
 		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/englishlakes/admin-panel.png">

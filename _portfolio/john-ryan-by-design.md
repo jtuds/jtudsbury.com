@@ -23,7 +23,7 @@ The website consisted of an ecommerce area, some standard templates such as a co
 <h2>My contributions</h2>
 
 <div class="portfolio__skill">
-	<h3 class="portfolio__subheading">CSS / SASS</h3>
+	<h3 class="portfolio__subheading" id="csssass">CSS / SASS</h3>
 	<p>My key responsibility for this project was to write the CSS using SASS to style the front end using designs provided by the designer I worked with. These designs were provided as a mix of full page mockups and component styles, such as headings and buttons, allowing me to interpret the designs to style pages without the designer having to mock up every single template. This approach meant there was some room to interpret the designs and implement some of my own design decisions where specific decisions had not been made by the designer. This process would finish with a review and some feedback / alterations from the designer.</p>
 	<figure class="portfolio__figure portfolio__figure--screenshot">
 		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/jrbd/css.png">
@@ -37,7 +37,7 @@ The website consisted of an ecommerce area, some standard templates such as a co
 </div><!--/.portfolio__skill -->
 
 <div class="portfolio__skill">
-	<h3 class="portfolio__subheading">PHP</h3>
+	<h3 class="portfolio__subheading" id="php">PHP</h3>
 	<p>The nature of this project, particularly the customisation to Woocommerce that was required, along with the heavy usage of Advanced Custom Fields for content management, meant that there was a lot of PHP functionality. I worked with a backend developer on this project and with that support I was able to assist with PHP tasks and in many cases complete them alone, allowing the backend developer to focus on the most complex backend challenges of the project.</p>
 	<p>The main area I worked on was the functionality of the templates. This meant writing the logic to output the correct markup based on things such as admin options/content and areas of the site, e.g. different markup for different taxonomies.</p>
 	<figure class="portfolio__figure portfolio__figure--screenshot">

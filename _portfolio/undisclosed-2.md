@@ -21,7 +21,7 @@ This website is still in the build phase and is not finalised therefore I cannot
 <h2>My contributions</h2>
 
 <div class="portfolio__skill">
-	<h3 class="portfolio__subheading">Javascript</h3>
+	<h3 class="portfolio__subheading" id="javascript">Javascript</h3>
 	<p>This project required a step by step order process where the user could build up an order by specifying details about it. They would firstly enter their postcode to see if they were in an accepted area, then they would choose some predefined options about their order, then they would be able to choose a collection and delivery date and timeslot before finally being able to review and confirm the order.</p>
 	<p>I worked on this project with a colleague more experienced in Javascript who was tasked with the development of the order process, however due to workload I ended up helping out with some aspects of it. I assisted in 3 main tasks; 
 		<ul>

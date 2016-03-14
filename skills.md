@@ -5,12 +5,97 @@ permalink: /skills/
 custom_name: skills
 ---
 
-Skills!
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Git</h3>
+	<p>I use Git daily and it was a requirement in my previous role. I am comfortable in using it on the command line, though I will revert to a GUI when faced with some trickier/riskier commands as to try to negate some risk.</p>
+</div><!--/.portfolio__skill -->
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">User behaviour</h3>
+	<p>I like to read about and theorise on user behaviour. It interests me why people, and therefore users, do what they do and how as makers of the web we can use these theories to create better and more useful experiences. I particularly like the content on <a href="http://coglode.com/">Coglode</a> and would like to apply my interest in this area to my work more in the future.</p>
+</div><!--/.portfolio__skill -->
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Grunt</h3>
+	<p>I use a pretty standard Grunt set up in my work flow. Some of the tasks I have set up are; CSS minification, live reload, image minification, grunticon, concatenation, autoprefixer and modernizr.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">CRO</h3>
+	<p>In my previous role I was involved in the beginnings of a dedicated CRO service. I was involved in discussions on how we could implement it as a service the company offered, some ways in which we could use it for specific client and was also involved in communicating some ideas in a client meeting. I believe CRO links nicely in to user behaviour and one of my aims in this area is to be able to create tests on user theories and log how these tests influenced user behaviour in order to develop a knowledge base of what techniques are most/least in which situations.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Woocommerce</h3>
+	<p>I have developed multiple Woocommerce sites, varying in their size and customisation. I am comfortable in using the framework and have a good grasp on how best to approach development with it. I have also lead a project that uses this plugin.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Magento</h3>
+	<p>I wasn't required to work on Magento projects in my most recent role, however in my role previous I worked on already built Magento sites before taking the lead on a full custom build of my own.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Performance</h3>
+	<p>I see performance as a key part of my development process. Though I have not always found it easy to get time to specifically work on improving performance of websites I always try to in at least some time and regardless consider things such as image size, minification and general page weight as a I go along on the build of a website. I would like to devote more time to this area and really focus on things like time to first bite and critical CSS.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Photo / asset editing</h3>
+	<p>I have always been required to work with static assets, from designs to images to icons. I am comfortable in using Photoshop to do this but will more than often default to Pixlr as I find it quicker and easier for simple editing tasks. I am also comfortable in some design related tasks, for example in my previous role I was often required to edit things like flyers using Photoshop.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">SVG editing</h3>
+	<p>I have done some basic SVG editing where required (usually using Inkscape). This involves editing fill colours directly in the code and using Inkscape to edit icon sizes.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Angular</h3>
+	<p>I have never used Angular on a project and would not consider myself proficient in using it. I have taken an Angular course in my own time, both to help my Javascript skills and to understand more and learn some Angular basics. I would like to build on these basics in the future to become more proficient in a Javascript framework, though I wouldn't necessarily do this in Angular. I have also done a tutorial using backbone.js, again to help improve my Javascript skills.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">jQuery</h3>
+	<p>I am comfortable using jQuery as this is how I usually go about implementing any Javascript functionality that I need, simply due to its ease of use. The majority of custom Javascript functionality I have written has been using jQuery, though I understand the benefits of vanilla JS and wouldn't be averse to focusing my learning more in that area.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Guitar</h3>
+	<p>I play guitar in my spare time and take weekly lessons with breaks. I'm currently on a break from lessons, which I will be coming back from next month and it is my aim this year to be able to listen to and transpose solos.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Time management</h3>
+	<p>In my previous role I learnt a lot about the importance of and how to manage time efficiently. I like to plan my day out the evening before, use my calendar, Trello, have focused/none disrupted time with mini breaks, communicate effectively with colleagues (judging importance of things) to reduce disruption to them and know when to say no to things.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Teamwork</h3>
+	<p>I value my teamwork in both personal and professional situations. I play a lot of football and through this know how important getting a team to work well together can be. In a professional setting I have always found that others find it easy to work with me and have been required in all my roles to work with a variety of people, from closely working with designers to going to client meetings with project managers.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Psychology</h3>
+	<p>An interest of mine that is somewhat related to my work. I love to read about how humans behave and how the mind works. I particularly like the work of <a href="http://www.nathalienahai.com/">Nathalie Nahai</a>, a web psychologist and enjoy books such as Blink, by Malcolm Gladwell. I believe these ideas can be used on the web to help understand and influence how users behave.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Client interaction</h3>
+	<p>In both of my agency roles I have been asked and trusted to interact with clients. This has involved being on phone calls with the client, both in a group and individually, and attending client meetings to give input from a technical perspective.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Reading</h3>
+	<p>I make it a requirement of mine to read in my spare time. I read both fiction and non fiction in the hope to increase my knowledge in a range of areas. I try to read at least 1 article related to the web, 1 article on any subject and some non fiction every day.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Involvement in dev community</h3>
+	<p>I find being involved in the web community keeps my enthusiastic about what I do and always leaves me with loads of ideas and excitement. I try to attend meet ups such as <a href="http://nuxuk.org/">NUX</a> and <a href="http://www.meetup.com/McrFRED/">McrFRED</a> as regularly as possible as well as going to conferences. I would like to attend more conferences this year, preferably outside of my local area and would also like to get involved in teaching at Code Club.</p>
+</div><!--/.portfolio__skill -->
+
+<div class="portfolio__skill">
+	<h3 class="portfolio__subheading">Growth mentality and desire to learn</h3>
+	<p>I have a desire to constantly grow and learn both in the web and in general life. I think that it would be a waste of myself not to be the best I can be in every area of life and I think this shows itself in my work. I am not happy to settle for being in my comfort zone and will constantly push myself to learn new things and become better at what I do.</p>
+</div><!--/.portfolio__skill -->
