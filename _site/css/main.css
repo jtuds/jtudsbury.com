@@ -89,11 +89,11 @@
 /**
  * Media query mixin.
  *
- * ItÔÇÖs not great practice to define solid breakpoints up-front, preferring to
- * modify your design when it needs it, rather than assuming youÔÇÖll want a
- * change at ÔÇÿmobileÔÇÖ. However, as inuit.css is required to take a hands off
+ * It├ö├ç├ûs not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming you├ö├ç├ûll want a
+ * change at ├ö├ç├┐mobile├ö├ç├û. However, as inuit.css is required to take a hands off
  * approach to design decisions, this is the closest we can get to baked-in
- * responsiveness. ItÔÇÖs flexible enough to allow you to set your own breakpoints
+ * responsiveness. It├ö├ç├ûs flexible enough to allow you to set your own breakpoints
  * but solid enough to be frameworkified.
  *
  * We define some broad breakpoints in our vars file that are picked up here
@@ -227,7 +227,6 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(1020px - (12px * 2));
   max-width: calc(1020px - (12px * 2));
   margin-right: auto;
   margin-left: auto;
@@ -431,18 +430,30 @@ pre {
 * Setting a VW or VH height on the grid parent and 100% height on the children grid__items should allow for fairly responsive equal heights
 */
 .grid--flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap; }
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
   .grid--flex > .grid__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap; }
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
     .grid--flex > .grid__item, .grid--flex > .grid__item > * {
       min-height: 100%; }
     .grid--flex > .grid__item > * {
       width: 100%; }
   @media only screen and (max-width: 480px) {
     .grid--flex {
-      flex-flow: column wrap; } }
+      -webkit-flex-flow: column wrap;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap; } }
 
 .grid--relative .grid__item {
   position: relative; }
@@ -2290,7 +2301,7 @@ pre {
 /**
  * These buttons will fill the entirety of their container.
  *
- * 1. Remove padding so that widths and paddings donÔÇÖt conflict.
+ * 1. Remove padding so that widths and paddings don├ö├ç├ût conflict.
  */
 .btn--full {
   width: 100%;
@@ -2411,24 +2422,30 @@ button {
   .hero__text .rotating-words {
     display: block; }
     .hero__text .rotating-words > span {
-      animation: rotateWord 18s linear infinite 0s;
+      -webkit-animation: rotateWord 18s linear infinite 0s;
+              animation: rotateWord 18s linear infinite 0s;
       position: absolute;
       opacity: 0;
       overflow: hidden; }
       .hero__text .rotating-words > span:nth-child(2) {
-        animation-delay: 3s;
+        -webkit-animation-delay: 3s;
+                animation-delay: 3s;
         color: #CF7A74; }
       .hero__text .rotating-words > span:nth-child(3) {
-        animation-delay: 6s;
+        -webkit-animation-delay: 6s;
+                animation-delay: 6s;
         color: #74CF99; }
       .hero__text .rotating-words > span:nth-child(4) {
-        animation-delay: 9s;
+        -webkit-animation-delay: 9s;
+                animation-delay: 9s;
         color: #E28ACF; }
       .hero__text .rotating-words > span:nth-child(5) {
-        animation-delay: 12s;
+        -webkit-animation-delay: 12s;
+                animation-delay: 12s;
         color: #FA855A; }
       .hero__text .rotating-words > span:nth-child(6) {
-        animation-delay: 15s;
+        -webkit-animation-delay: 15s;
+                animation-delay: 15s;
         color: #E7DB71; }
 
 .hero__text--large {
@@ -2445,6 +2462,26 @@ button {
   @media (max-width: 481px) {
     .hero__text--large .rotating-words > span {
       font-size: 30px; } }
+
+@-webkit-keyframes rotateWord {
+  0% {
+    opacity: 0; }
+  2% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px); }
+  5% {
+    opacity: 1;
+    -webkit-transform: translateX(0px); }
+  17% {
+    opacity: 1;
+    -webkit-transform: translateX(0px); }
+  20% {
+    opacity: 0;
+    -webkit-transform: translateX(30px); }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
 
 @keyframes rotateWord {
   0% {
@@ -2505,7 +2542,12 @@ button {
     color: white; }
     .site-nav__link:hover:after {
       height: 100%;
+      -webkit-transition: height 0.3s;
       transition: height 0.3s; }
+  .site-nav__link:active {
+    color: #CF7A74; }
+  .site-nav__link:hover:active:after {
+    background-color: white; }
   .site-nav__link:after {
     content: "";
     position: absolute;
@@ -2589,6 +2631,7 @@ button {
   left: 24px;
   top: 24px;
   z-index: 10;
+  -webkit-transition: none;
   transition: none;
   background-image: url("/images/icons/home-white.svg");
   background-image: url("/images/icons/home-yellow.svg"); }
@@ -2661,11 +2704,9 @@ h3, .gamma {
 .slick-slider {
   position: relative;
   display: block;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -2688,9 +2729,6 @@ h3, .gamma {
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
 .slick-track {
@@ -2753,7 +2791,6 @@ h3, .gamma {
   margin-top: -10px\9;
   /*lte IE 8*/
   -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding: 0;
   border: none;
@@ -2840,10 +2877,13 @@ h3, .gamma {
   overflow: hidden;
   cursor: pointer; }
   .portfolio-card__screenshot-wrap:hover .portfolio-card__link-title, .portfolio-card__screenshot-wrap:focus .portfolio-card__link-title {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: all 0.3s;
     transition: all 0.3s; }
   .portfolio-card__screenshot-wrap:hover .portfolio-card__external-link, .portfolio-card__screenshot-wrap:focus .portfolio-card__external-link {
     opacity: 1;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s; }
   .portfolio-card__screenshot-wrap.portfolio-card__screenshot-wrap--disabled {
     cursor: default; }
@@ -2863,7 +2903,8 @@ h3, .gamma {
   color: white;
   text-shadow: 0 1px 2px rgba(41, 55, 64, 0.6);
   border-radius: 0 0 2px 2px;
-  transform: translateY(100%); }
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%); }
 
 .portfolio-card__facts-title {
   font-weight: 700;
@@ -2940,8 +2981,13 @@ h3, .gamma {
   color: #74CF99; }
 
 .skills-list__secondaries {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap; }
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
   .skills-list__secondaries > li {
     width: 100%;
     list-style-position: inside;
