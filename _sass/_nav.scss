@@ -3,7 +3,11 @@
  */
 
 .site-nav-wrapper {
-	overflow:hidden;
+
+	@media (max-width:$nav-bp) {
+		overflow-x:scroll;
+	-webkit-overflow-scrolling: touch;
+	}
 }
 
 .site-nav {
@@ -17,7 +21,6 @@
 .site-nav--home {
 
 	@media (max-width:$nav-bp) {
-		overflow-x:scroll;
 		white-space: nowrap;
 		min-width:$nav-bp + 100px;
 	}

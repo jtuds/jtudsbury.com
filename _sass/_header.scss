@@ -19,4 +19,11 @@
 	&:hover, &:active {
 		background-image:url('/images/icons/home-white.svg');
 	}
+
+	@media (max-width:$bp-extra-b) {
+		height:34px;
+		width:34px;
+		top:$spacing-unit;
+		left:$spacing-unit;
+	}
 }

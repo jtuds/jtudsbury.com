@@ -39,6 +39,11 @@
 	display:table-cell;
 	text-align: center;
 	vertical-align: middle;
+
+	@media (max-width:$bp-extra-b) {
+		display: block;
+		padding-top:60px;
+	}
 }
 
 .hero__text {
@@ -113,6 +118,13 @@
 
 	@media (max-width:$lap-start) {
 		font-size:34px;
+	}
+
+	.rotating-words > span {
+		
+		@media (max-width:$lap-start) {
+			font-size:30px;
+		}
 	}
 }
 
