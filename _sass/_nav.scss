@@ -57,13 +57,14 @@
 	}
 
 	&:active {
-		color:$palette-red;
+		color:white;
+		background-color: $palette-red;
 	}
 
 	&:hover:active {
 
 		&:after {
-			background-color: white;
+			background-color: $palette-red;
 		}
 	}
 
