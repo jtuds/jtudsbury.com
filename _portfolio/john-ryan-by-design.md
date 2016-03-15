@@ -67,7 +67,7 @@ The website consisted of an ecommerce area, some standard templates such as a co
 
 <div class="portfolio__skill">
 	<h3 class="portfolio__subheading">Content management</h3>
-	<p>A high level of content management was required for this project. The client required the ability to be able to edit large areas of the site. This meant they could do things such as choose which product categories to show on the homepage, which questions to show (if any), which product information tables to show, and to edit content on and arrange product information panels. This fucntionality was built with the help of Advanced Custom Fields.</p>
+	<p>A high level of content management was required for this project. The client required the ability to be able to edit large areas of the site. This meant they could do things such as choose which product categories to show on the homepage, which questions to show (if any), which product information tables to show, and to edit content on and arrange product information panels. This functionality was built with the help of Advanced Custom Fields.</p>
 	<figure class="portfolio__figure portfolio__figure--screenshot">
 		<img class="portfolio__screenshot" src="{{ site-url }}/images/screenshots/jrbd/acf.png">
 		<figcaption>An Advanced Custom Fields field used to add a header, text and a table by referencing the post object of a Wordpress table plugin.</figcaption>
