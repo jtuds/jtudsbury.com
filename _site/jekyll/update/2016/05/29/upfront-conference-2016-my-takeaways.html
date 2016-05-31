@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Upfront conf 2016 - my takeaways | Portfolio of James Tudsbury, Manchester based web developer</title>
+  <meta name="description" content="I attended my first Upfront conference a couple of days ago, and though I’ve been to various talks and mini conferences, this was probably my first ever “pro...">
+
+  <link rel="stylesheet" href="/css/main.css?bust=1464715564">
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700|Hind:300,500' rel='stylesheet' type='text/css'>
+  <link rel="canonical" href="http://jtudsbury.com/jekyll/update/2016/05/29/upfront-conference-2016-my-takeaways.html">
+  <link rel="alternate" type="application/rss+xml" title="James Tudsbury - Web Developer" href="http://jtudsbury.com/feed.xml">
+  <link rel="shortcut icon" href="http://jtudsbury.com/favicon_v2.ico" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  
+    <a class="icon icon--home-yellow home-link" href="http://jtudsbury.com"><span class="visuallyhidden">Home</span></a>
+  
+
+  <div class="hero">
+
+    <div class="hero__text-wrapper">
+      <div class="wrapper">
+        <h1 class="hero__text">James Tudsbury
+          <div class="rotating-words">
+            <span>Front end developer<span class="visuallyhidden">, </span></span>
+            <span>Backend dabbler<span class="visuallyhidden">, </span></span>
+            <span>User behaviour enthusiast<span class="visuallyhidden">, </span></span>
+            <span>Designer<span class="visuallyhidden">, </span></span>
+            <span>Web lover<span class="visuallyhidden">, </span></span>
+            <span>Mountain jumper<span class="visuallyhidden">.</span></span>
+          </div>
+        </h1>
+      </div><!--/.wrapper -->
+    </div><!--/.hero__text-wrapper -->
+
+  </div><!--/.hero -->
+
+  
+    <div class="site-nav-wrapper">
+      <nav class="site-nav site-nav--single">
+        <a class="site-nav__link" href="http://jtudsbury.com/">Back to home</a>
+      </nav>
+    </div><!--/.site-nav-wrapper -->
+  
+
+</header>
+
+
+    <div class="page-content">
+      <div class="panel">
+	<div class="wrapper">
+		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+		  <header class="post-header">
+		    <h1 class="post-title" itemprop="name headline">Upfront conf 2016 - my takeaways</h1>
+		    <p class="post-meta"><time datetime="2016-05-29T14:24:23+01:00" itemprop="datePublished">May 29, 2016</time></p>
+		  </header>
+
+		  <div class="post-content" itemprop="articleBody">
+		    <p>I attended my first Upfront conference a couple of days ago, and though I’ve been to various talks and mini conferences, this was probably my first ever “proper” web conference. It was packed full of great speakers and ideas which I have noted down at the time and remembered since to varying effect. Here are some of my thoughts on the talks and what I’ve taken away from it all.</p>
+
+<h3 id="a-field-guide-to-web-accessibility---derek-featherstone-featherhttpstwittercomfeather">“A field guide to web accessibility” - Derek Featherstone <a href="https://twitter.com/feather">@feather</a></h3>
+<p>This was a very enjoyable talk on what is often seen as a bit of a dull topic in the web community. Derek related accessibility issues to his own life and the life’s of the people around him (his father in laws desktop was a sight to behold). The key thing I took from this talk was that writing accessible code does not equal accessible websites. It is a great first step but a site doesn’t need to be just coded with accessibility in mind, it has to be designed that way too.</p>
+
+<p>Derek invited the audience to do the straw test, which is where you take your fist and hold it as if you were holding a straw, and then look through the gap at a web page and attempt to use the page. It demonstrated how an accessible form in a coding sense was still very difficult to use as the labels and inputs were laid out so far apart. Simply moving the inputs underneath the labels made using the form under the conditions of the straw test much easier. A good rule of thumb is that good accessibility = good design so considering accessibility from a design point of view can help the design along quite a lot.</p>
+
+<h3 id="from-pages-to-patterns---charlotte-jackson-lottejacksonhttpstwittercomlottejackson">“From pages to patterns” - Charlotte Jackson <a href="https://twitter.com/Lottejackson">@lottejackson</a></h3>
+<p>This was probably my favourite talk of the day. Charlotte spoke about pattern libraries and how she goes about implementing them on her projects. There was some interesting snippets such as an idea on naming CSS classes based on the theme of the project you are working on. So for example, on a bike website, you might use classes such as <code class="highlighter-rouge">.pump</code>, and <code class="highlighter-rouge">.frame</code> as your building blocks. These classes contain quite basic styles, some padding top and bottom for example, and what they allow you to do is give your classes a meaning but without giving them too much meaning or tying them to context too much, which equals reusability! This idea is basically in the same ballpark as using classes like <code class="highlighter-rouge">.wrapper</code>, or <code class="highlighter-rouge">.block</code> but it allows you to add to your class vocabulary without getting content specific.</p>
+
+<p>I have used a similar idea to this on a few of my projects. I often use a class called <code class="highlighter-rouge">.panel</code> in which I’ll add some top and bottom padding and then have modifier classes for things like background colours, e.g. <code class="highlighter-rouge">.panel--background-red</code>. I was finding that when variations of the panel class existed I was attaching content specific classes such as <code class="highlighter-rouge">.panel--product</code> in order to achieve the different design. This meant that the <code class="highlighter-rouge">.panel--product</code> class then couldn’t be used on anything that wasn’t a product, or it could but it wouldn’t make sense. So I wanted a generic name in the context of the site (or design system) but a name that could have meaning to the developer. With this in mind I started using city names as panel modifier classes, e.g. <code class="highlighter-rouge">.panel--moscow</code>. This had no meaning in the context of the site but a developer could look it and know what styles a Moscow panel contained.</p>
+
+<p>I digress. My main takeaway from this talk wasn’t the naming conventions described above, it was naming exercise that Charlotte explained. She has <a href="http://alistapart.com/article/from-pages-to-patterns-an-exercise-for-everyone">written about it on A List Apart</a> and I would highly recommend checking it out in detail. To summarise, the exercise involves getting people involved in the project, which means everyone from developers to clients to project managers. You print out the site designs and as a group cut out every component that you find and group similar components together. Then you each come up with a name for the components and see what patterns emerge. I think this is a great way to really define what a component is in your design and name it accordingly rather than giving that task solely to a developer, who has their own biases. To go further with this, a group of developers (or anyone comfortable with code) could make a timeboxed attempt at coding up the component to achieve a similar result. You can assess the results and look for patterns to get an idea on the best way to set a component up in the code.</p>
+
+<p>My main takeway from this talk was definitely the exercise. I can definitely see myself using this and I think it’d be a great exercise to do with some front end developers and designers in the near future. I think you could do this exercise on new/existing projects that you work on or even just pick a website that you have no involvement in. Either way will start to get your mind thinking in a design system / component way.</p>
+
+<h3 id="making-it-better-without-making-it-over---rebecca-murphey-rmurpheyhttpstwittercomrmurphey">“Making it better without making it over” - Rebecca Murphey <a href="https://twitter.com/rmurphey">@rmurphey</a></h3>
+<p>Rebecca works on the Indeed job site and her talk was all about how to improve a system without completely starting from scratch, an approach that she pointed out would be very risky for a site the size of and with the profitability of Indeed. There was a trip down memory lane as she highlighted some of the popular (and not so popular) frameworks and libraries of the past and brought us all the way up to the present with the likes of Node and Backbone.</p>
+
+<p>My takeaways from this were that you can always start from scratch and make a new shiny thing, but it’s going to be outdated and some other developers pain in the arse at some point just like it was yours. Starting from scratch doesn’t come without risk (in fact there is a lot of risk involved) and using the latest and greatest framework/library/thing doesn’t automatically make a project great or future proof.</p>
+
+<h3 id="i-am-grout---peter-gasston-stopsatgreenhttpstwittercomstopsatgreen">“I am grout” - Peter Gasston <a href="https://twitter.com/stopsatgreen">@stopsatgreen</a></h3>
+<p>Peters talk was all about how the web is dead and how we should give up (kind of / not). This talk really put in to context the current landscape of the web and the potential threats that it faces. Publishers are now turning away from the web and hosting their content on Facebook, Medium and native device platforms. There was a remarkable point about how for a lot of people, the web is just Facebook and actually a lot of people Facebook users don’t know what the web is. This was for a couple of reasons, some people just have all the content that they’d ever want on Facebook. News, pictures, videos, social, it’s all served up on a platter on Facebook. Then some people turn to it for the performance gains. The cost of using the web in developing countries is high so users in these countries turn to Facebook where content is a lot more optimised than it is on the web (generally) and they get a lot more for their money.</p>
+
+<p>Thankfully the web isn’t completely dead, but it could be if we don’t look after it. Things like progressive web apps and caring about performance on our websites means that there is hope for the web but just because the web won once doesn’t mean it will again. This is quite a worrying thought and I think the web could well be in significant danger, however there is some great people working on the web doing some great things and though I don’t think the mere existence of these people means the web will thrive, I think it gives it a fighting chance and we should all play our part on improving and advocating it.</p>
+
+<p>By the way - the talks name came from Peters realisation that the web was akin to the grout holding his tiles together in the shower. Metaphor of the day for certain.</p>
+
+<h3 id="computer-science-with-threads-and-needles---mariko-kosaka-kosamarihttpstwittercomkosamari">“Computer science with threads and needles” - Mariko Kosaka <a href="https://twitter.com/kosamari">@kosamari</a></h3>
+<p>This was certainly the most unique talk of the day in my opinion. Mariko shown everybody how she had delved in to the world of hardware to mix her hobby (knitting) with programming, in this case she had programmed threading machines to knit a coded pattern. The talk had some basic introduction to how circuits worked (a required memory jogger for myself) and along with explaining how she did this she also gave us some live demos of programmed hardware, which included inviting the audience to visit a website that controlled the colour of an LED on the stage, resulting in a mini discotheque on stage. This was a great talk about just how far you can get in to something regardless of experience and a bit of a nudge to experiment and play with whatever your interests are and see how that can link in to the day job of a developer.</p>
+
+<h3 id="cant-you-make-it-more-like-bootstrap---alice-bartlett-alicebartletthttpstwittercomalicebartlett">“Can’t you make it more like Bootstrap?” - Alice Bartlett <a href="https://twitter.com/alicebartlett">@alicebartlett</a></h3>
+<p>This was the talk I was looking forward to seeing the most. It led off from Charlottes earlier talk quite nicely and was all about the component system used at the Financial Times called Origami. Alice detailed how diverse the Financial Times online presence was, admitting she didn’t even know quite how many sites there are under the FT name. With this diversity came diversity of code, there was examples of where an icon had been implemented in 4 (I think) different ways to achieve the exact same effect. Origami is a component library which contains THE way a component should be implemented but the issue was that nobody was using it. On joining the FT Alice did some internal user testing and got some feedback that was the influence for the talks name, “Can’t you make it more like Bootstrap”. So this talk was less about what component libraries were and more about how to get people working on the product or within the company using them once they are in place. Documentation seemed to be a massive influencer, with people really liking the way the likes of Bootstrap and Future Learn presented theirs. The solution was to implement some good documentation presented in a usable way for Origami.</p>
+
+<p>My main takeaway from this was that you can’t just make something and expect people to use it because it’s great, you have to make it easy to use aswell. Good documentation is key to this and good documentation has to have just enough detail but also be concise and it has to be well presented, i.e. not hidden away on a Github page or something similar. This requires more effort but is worth it in the long run.</p>
+
+<h3 id="works-on-my-machine-or-the-problem-is-between-keyboard-and-chair---lena-reinhard-lrnrdhttpstwittercomlrnrd">“Works on my machine, or the problem is between keyboard and chair” - Lena Reinhard <a href="https://twitter.com/lrnrd">@lrnrd</a></h3>
+<p>I would say that this was the most thought provoking and certainly hard hitting talk of the day. In a nutshell, this talk was about various forms of discrimination within the tech industry and how we as contributors to that industry and members of that community/society should do more to stop it and prevent it from happening. I agreed with the overall point of this talk, which I think was to promote action to help reduce and ultimately stop discrimination within the industry and how as mostly privileged members of the community, i.e. not sufferers of discrimination, we are in a position to make an impact. It also highlighted how just because you might not suffer from the issues she discussed, that does not mean that they do not exist and aren’t the cause of suffering for others within the industry.</p>
+
+<p>My gripe with this talk however was with what I felt was a very negative and sweeping criticism of the industry and everyone in it. The content and delivery of the first half of the talk seemed to suggest that the whole industry was racist, sexist, homophobic, plus more, and completely ignored any efforts to improve this situation or acknowledge that they existed. I also didn’t agree that every company or individual in the industry fit in to this description and the suggestion that they did is something that I don’t think is fair to anybody, including those people who could be traditionally discriminated against yet are very happy and equally treated in their role. I think this perhaps a case of points of view. From a positive one, I think we should be encouraging more equality through those that already practice it instead of negatively targeting those don’t and approaching it from that angle.</p>
+
+<p>In general I think any talk that highlights any form of discrimination or inequality is worth it purely for the potential for increased awareness and Lena did finish the talk on a positive note with steps we could all take to improve the situation, but my impression of the talk was marred by the its delivery and focus.</p>
+
+		  </div>
+
+		</article>
+	</div><!-- end .wrapper -->
+</div><!-- end .panel -->
+
+    </div>
+
+    
+  <nav class="site-nav site-nav--footer">
+      <a class="site-nav__link" href="#">Back to top</a><a class="site-nav__link" href="http://jtudsbury.com/">Back to home</a>
+    </nav>
+
+
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <p>Email: <a href="mailto:james@jtudsbury.com">james@jtudsbury.com</a> | Twitter: <a href="https://twitter.com/@jtuds">@jtuds</a> | Icons by <a href="http://www.freepik.com" title="Freepik">Freepik</a> and <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-34770509-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+
+</html>
