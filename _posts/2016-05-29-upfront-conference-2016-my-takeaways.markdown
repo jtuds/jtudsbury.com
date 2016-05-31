@@ -2,7 +2,7 @@
 layout: post
 title:  "Upfront conf 2016 - my takeaways"
 date:   2016-05-29 13:24:23 +0000
-categories: jekyll update
+categories: posts talks
 ---
 
 I attended my first Upfront conference a couple of days ago, and though I've been to various talks and mini conferences, this was probably my first ever "proper" web conference. It was packed full of great speakers and ideas which I have noted down at the time and remembered since to varying effect. Here are some of my thoughts on the talks and what I've taken away from it all.
