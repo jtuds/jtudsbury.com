@@ -3,18 +3,151 @@
   <channel>
     <title>James Tudsbury - Web Developer</title>
     <description>Portfolio of Manchester based front end web developer James Tudsbury.</description>
-    <link>http://jtudsbury.com/</link>
-    <atom:link href="http://jtudsbury.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 May 2016 18:30:28 +0100</pubDate>
-    <lastBuildDate>Tue, 31 May 2016 18:30:28 +0100</lastBuildDate>
+    <link>http://127.0.0.1:4000/</link>
+    <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 06 Jul 2016 18:21:57 +0100</pubDate>
+    <lastBuildDate>Wed, 06 Jul 2016 18:21:57 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>WIP - Naming stuff in CSS</title>
+        <description>&lt;p&gt;Naming stuff in CSS is easy. If you forget about reusability, DRY (don’t repeat yourself), OOCSS (object orientated CSS), component based CSS, and reusable patterns, then it really is easy. Class names such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage-article-big&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage-article-big-alt&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage-article-big-alt-2&lt;/code&gt; mean you can add classes and tailor them till your hearts content without ever really considering what a good name might constitute. If you do care about all those things I mentioned, and you probably should if you want to build a scalable and future proof design system, then naming stuff in CSS isn’t easy, it’s really really hard.&lt;/p&gt;
+
+&lt;p&gt;Of course this is nothing new and it’s a well documented issue with plenty of articles, discussions, methodologies and techniques devised to help with it. One of the biggest helps I have come across in recent years is the BEM methodology. I won’t go in to it in detail here because it has already been explained in numerous articles but if you haven’t heard of it I would recommend starting with &lt;a href=&quot;http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/&quot;&gt;Harry Robert’s article on the subject&lt;/a&gt;. In summary, BEM gives you a structured way to name your CSS classes. Most importantly it forces you to think about what type of class something is. Is it a block, a top level class that will encompass other classes, e.g. “.human”? Is it an element, a child of the block, e.g. “.human__eye”? Or is it a modifier, something that is a variation of the element, e.g. “.human__eye–blue”? Thinking in this way, or in the way of any of the other methodologies such as OOCSS (and they can all work together, mostly) means that your class names are probably pretty good and you’re avoiding code like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.about-section {}
+.homepage.about-section {}
+.contact-page.about-section {}
+.contact-page.about-section-alt {}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The above code will do a job, but it’s not reusable, it’s hard to maintain, and it’s probably going to break at some point.&lt;/p&gt;
+
+&lt;p&gt;The issue I have come across on multiple projects and for some time now is what to name things that are similar, but not similar enough to be the same block or component. For example I might have a class called ‘.card’ which has some padding, a border radius and a box shadow. This is all fine because I can add those styles to my &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; class like so&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card {
+	padding:20px;
+	box-shadow: 1px 1px 1px #000;
+	border-radius:2px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If I then have a component very much like &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; but need less padding I have to identify that somehow. You could add a class like &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--small&lt;/code&gt; which adds a modifier on to the card class to signify that it is small. Then your CSS would look something like&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card--small {
+	padding:10px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This variation of &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; might also require some extra margin, a border, and a transition. This is the point at which our variation of &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt;, though very similar in looks, is starting to become a different thing in code. You could continue to use modifiers in a few different ways. The first of which is to name the modifier based on what the modification is doing like&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card--margin {
+	margin:10px;
+}
+
+.card--border {
+	border:1px solid red;
+}
+
+.card--has-transition {
+	transition: all 0.2s;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This method becomes an issue for me most noticeably when using media queries. If I don’t want my card to have a border at less than 600px then at less than 600px my &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--border&lt;/code&gt; class makes no sense.&lt;/p&gt;
+
+&lt;p&gt;The second way to continue to use modifiers is to not reference the modification directly but do something like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card--alt {
+	margin:10px;
+	border:1px solid red;
+	transition: all 0.2s;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This works fine until you have another component similar to &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; but not quite the same. What do you name that? &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--alt-2&lt;/code&gt;? It’s very convoluted.&lt;/p&gt;
+
+&lt;p&gt;You could use a hierarchical based naming system such as&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card--primary {
+	padding:10px;
+}
+
+.card--secondary {
+	margin:10px;
+	border:1px solid red;
+	transition: all 0.2s;
+}
+
+.card--tertiary {
+	more styles for your other variant of card
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This isn’t too bad in my opinion but typing out “quaternary” isn’t fun and I don’t even know the name for the fifth item in that hierarchical naming system. The other issue with this is that it is a lie. &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--secondary&lt;/code&gt; is of not less importance or less deserving of a primary label than &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--primary&lt;/code&gt;. The hierarchical labeling isn’t actually a representation of the components it is being used on.&lt;/p&gt;
+
+&lt;p&gt;Finally, you could relate the class to the context in which it is being used like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card--product {
+	padding:10px;
+}
+
+.card--article-list {
+	margin:10px;
+	border:1px solid red;
+	transition: all 0.2s;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This works up until the point where your &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--product&lt;/code&gt; class is required away from a product page (or component). At which point you have to consider renaming the class, or copying the styles within it in to a newly named class, which goes against the DRY principle.&lt;/p&gt;
+
+&lt;p&gt;TALK ABOUT MY PARTICULAR PROBLEM WITH NAMING STUFF IN A REUSBALE WAY BUT TOO RELATED TO CONTENT - MAKES IT NOT REUSABLE&lt;/p&gt;
+
+&lt;p&gt;So this brings me to the point of this post, a proposed solution. As a developer what I would like the following from my class names;
+- They are not a representation of the styles within it (such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--margin&lt;/code&gt;), because styles can change.
+- They do not follow a hierarchical naming system, because this adds a layer of meaning that won’t always truly represent the class
+- They can be extended upon without convoluted naming (such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--alt-2&lt;/code&gt;)
+- They can be uniquely identified in a meaningful way. Words are meaningful to me and can be shared, codes and numbers cannot
+- They can be reused anywhere and are not tied to context&lt;/p&gt;
+
+&lt;p&gt;The idea I have been using to satisfy these requirements is something I’ll call “INSERT GREAT NAME HERE” naming. The idea is to give your class names a theme that is unrelated to the code itself and any context it may be used in. For example, say I’m working on a website for a fashion retailer, I could take my card component and call it &lt;code class=&quot;highlighter-rouge&quot;&gt;.card-athens&lt;/code&gt;. Athens is obviously a city and has nothing directly to do with fashion and it has nothing to do with the styles that I put inside of that element. But it allows me to give the component a name that I can reference, and that others can reference. It attaches meaning to the class, without attaching too much meaning or context. I can reuse &lt;code class=&quot;highlighter-rouge&quot;&gt;.card-athens&lt;/code&gt; anywhere within the site, regardless of context and it makes sense. I can also extend this class quite easily for when I have similar components that are different in code. According to Google and the World Atlas, there are 4,416 cities in the world. That’s a lot of names you have at your disposable (though you probably, definitely, shouldn’t have 4,416 card components, but that’s another post), you can create 4,416 card components that are all different and have a different identifier but which are much more meaningful to humans than numbers or an ID code.&lt;/p&gt;
+
+&lt;p&gt;Let’s get in to some examples of SHOW EXAMPLES OF MY IDEAS AND WORK AND THEN GO IN TO IN THE WILD EXAMPLES WITH BBC AND LOTTE JACKSON&lt;/p&gt;
+
+&lt;p&gt;TALK ABOUT THE SOLUTION&lt;/p&gt;
+
+&lt;p&gt;MENTION THE BBC AND LOTTE JACKSON&lt;/p&gt;
+
+&lt;p&gt;ADD HEADINGS AND ALSO PADDING TO THE CODE SNIPPETS&lt;/p&gt;
+
+&lt;h3 id=&quot;a-field-guide-to-web-accessibility---derek-featherstone-featherhttpstwittercomfeather&quot;&gt;“A field guide to web accessibility” - Derek Featherstone &lt;a href=&quot;https://twitter.com/feather&quot;&gt;@feather&lt;/a&gt;&lt;/h3&gt;
+</description>
+        <pubDate>Fri, 01 Jul 2016 14:24:23 +0100</pubDate>
+        <link>http://127.0.0.1:4000/posts/css/sass/2016/07/01/wip-naming-stuff-in-css.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/posts/css/sass/2016/07/01/wip-naming-stuff-in-css.html</guid>
+        
+        
+        <category>posts</category>
+        
+        <category>css</category>
+        
+        <category>sass</category>
+        
+      </item>
     
       <item>
         <title>Upfront conf 2016 - my takeaways</title>
         <description>&lt;p&gt;I attended my first Upfront conference a couple of days ago, and though I’ve been to various talks and mini conferences, this was probably my first ever “proper” web conference. It was packed full of great speakers and ideas which I have noted down at the time and remembered since to varying effect. Here are some of my thoughts on the talks and what I’ve taken away from it all.&lt;/p&gt;
 
 &lt;h3 id=&quot;a-field-guide-to-web-accessibility---derek-featherstone-featherhttpstwittercomfeather&quot;&gt;“A field guide to web accessibility” - Derek Featherstone &lt;a href=&quot;https://twitter.com/feather&quot;&gt;@feather&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;This was a very enjoyable talk on what is often seen as a bit of a dull topic in the web community. Derek related accessibility issues to his own life and the life’s of the people around him (his father in laws desktop was a sight to behold). The key thing I took from this talk was that writing accessible code does not equal accessible websites. It is a great first step but a site doesn’t need to be just coded with accessibility in mind, it has to be designed that way too.&lt;/p&gt;
+&lt;p&gt;This was a very enjoyable talk on what is often seen as a bit of a dull topic in the web community. Derek related accessibility issues to his own life and the lives of the people around him (his father in laws desktop was a sight to behold). The key thing I took from this talk was that writing accessible code does not equal accessible websites. It is a great first step but a site doesn’t need to be just coded with accessibility in mind, it has to be designed that way too.&lt;/p&gt;
 
 &lt;p&gt;Derek invited the audience to do the straw test, which is where you take your fist and hold it as if you were holding a straw, and then look through the gap at a web page and attempt to use the page. It demonstrated how an accessible form in a coding sense was still very difficult to use as the labels and inputs were laid out so far apart. Simply moving the inputs underneath the labels made using the form under the conditions of the straw test much easier. A good rule of thumb is that good accessibility = good design so considering accessibility from a design point of view can help the design along quite a lot.&lt;/p&gt;
 
@@ -23,7 +156,7 @@
 
 &lt;p&gt;I have used a similar idea to this on a few of my projects. I often use a class called &lt;code class=&quot;highlighter-rouge&quot;&gt;.panel&lt;/code&gt; in which I’ll add some top and bottom padding and then have modifier classes for things like background colours, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;.panel--background-red&lt;/code&gt;. I was finding that when variations of the panel class existed I was attaching content specific classes such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.panel--product&lt;/code&gt; in order to achieve the different design. This meant that the &lt;code class=&quot;highlighter-rouge&quot;&gt;.panel--product&lt;/code&gt; class then couldn’t be used on anything that wasn’t a product, or it could but it wouldn’t make sense. So I wanted a generic name in the context of the site (or design system) but a name that could have meaning to the developer. With this in mind I started using city names as panel modifier classes, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;.panel--moscow&lt;/code&gt;. This had no meaning in the context of the site but a developer could look it and know what styles a Moscow panel contained.&lt;/p&gt;
 
-&lt;p&gt;I digress. My main takeaway from this talk wasn’t the naming conventions described above, it was naming exercise that Charlotte explained. She has &lt;a href=&quot;http://alistapart.com/article/from-pages-to-patterns-an-exercise-for-everyone&quot;&gt;written about it on A List Apart&lt;/a&gt; and I would highly recommend checking it out in detail. To summarise, the exercise involves getting people involved in the project, which means everyone from developers to clients to project managers. You print out the site designs and as a group cut out every component that you find and group similar components together. Then you each come up with a name for the components and see what patterns emerge. I think this is a great way to really define what a component is in your design and name it accordingly rather than giving that task solely to a developer, who has their own biases. To go further with this, a group of developers (or anyone comfortable with code) could make a timeboxed attempt at coding up the component to achieve a similar result. You can assess the results and look for patterns to get an idea on the best way to set a component up in the code.&lt;/p&gt;
+&lt;p&gt;I digress. My main takeaway from this talk wasn’t the naming conventions described above, it was naming exercise that Charlotte explained. She has &lt;a href=&quot;http://alistapart.com/article/from-pages-to-patterns-an-exercise-for-everyone&quot;&gt;written about it on A List Apart&lt;/a&gt; and I would highly recommend checking it out in detail. To summarise, the exercise involves getting the people involved in the project, which means everyone from developers to clients to project managers, you print out the site designs and as a group cut out every component that you find and group similar components together. Then you each come up with a name for the components and see what patterns emerge. I think this is a great way to really define what a component is in your design and name it accordingly rather than giving that task solely to a developer, who has their own biases. To go further with this, a group of developers (or anyone comfortable with code) could make a timeboxed attempt at coding up the component to achieve a similar result. You can assess the results and look for patterns to get an idea on the best way to set a component up in the code.&lt;/p&gt;
 
 &lt;p&gt;My main takeway from this talk was definitely the exercise. I can definitely see myself using this and I think it’d be a great exercise to do with some front end developers and designers in the near future. I think you could do this exercise on new/existing projects that you work on or even just pick a website that you have no involvement in. Either way will start to get your mind thinking in a design system / component way.&lt;/p&gt;
 
@@ -33,7 +166,7 @@
 &lt;p&gt;My takeaways from this were that you can always start from scratch and make a new shiny thing, but it’s going to be outdated and some other developers pain in the arse at some point just like it was yours. Starting from scratch doesn’t come without risk (in fact there is a lot of risk involved) and using the latest and greatest framework/library/thing doesn’t automatically make a project great or future proof.&lt;/p&gt;
 
 &lt;h3 id=&quot;i-am-grout---peter-gasston-stopsatgreenhttpstwittercomstopsatgreen&quot;&gt;“I am grout” - Peter Gasston &lt;a href=&quot;https://twitter.com/stopsatgreen&quot;&gt;@stopsatgreen&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Peters talk was all about how the web is dead and how we should give up (kind of / not). This talk really put in to context the current landscape of the web and the potential threats that it faces. Publishers are now turning away from the web and hosting their content on Facebook, Medium and native device platforms. There was a remarkable point about how for a lot of people, the web is just Facebook and actually a lot of people Facebook users don’t know what the web is. This was for a couple of reasons, some people just have all the content that they’d ever want on Facebook. News, pictures, videos, social, it’s all served up on a platter on Facebook. Then some people turn to it for the performance gains. The cost of using the web in developing countries is high so users in these countries turn to Facebook where content is a lot more optimised than it is on the web (generally) and they get a lot more for their money.&lt;/p&gt;
+&lt;p&gt;Peters talk was all about how the web is dead and how we should give up (kind of / not). This talk really put in to context the current landscape of the web and the potential threats that it faces. Publishers are now turning away from the web and hosting their content on Facebook, Medium and native device platforms. There was a remarkable point about how for a lot of people, the web is just Facebook and actually a lot of people who are Facebook users don’t know what the web is. This was for a couple of reasons, some people just have all the content that they’d ever want on Facebook. News, pictures, videos, social, it’s all served up on a platter on Facebook. Then some people turn to it for the performance gains. The cost of using the web in developing countries is high so users in these countries turn to Facebook where content is a lot more optimised than it is on the web (generally) and they get a lot more for their money.&lt;/p&gt;
 
 &lt;p&gt;Thankfully the web isn’t completely dead, but it could be if we don’t look after it. Things like progressive web apps and caring about performance on our websites means that there is hope for the web but just because the web won once doesn’t mean it will again. This is quite a worrying thought and I think the web could well be in significant danger, however there is some great people working on the web doing some great things and though I don’t think the mere existence of these people means the web will thrive, I think it gives it a fighting chance and we should all play our part on improving and advocating it.&lt;/p&gt;
 
@@ -50,16 +183,17 @@
 &lt;h3 id=&quot;works-on-my-machine-or-the-problem-is-between-keyboard-and-chair---lena-reinhard-lrnrdhttpstwittercomlrnrd&quot;&gt;“Works on my machine, or the problem is between keyboard and chair” - Lena Reinhard &lt;a href=&quot;https://twitter.com/lrnrd&quot;&gt;@lrnrd&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;I would say that this was the most thought provoking and certainly hard hitting talk of the day. In a nutshell, this talk was about various forms of discrimination within the tech industry and how we as contributors to that industry and members of that community/society should do more to stop it and prevent it from happening. I agreed with the overall point of this talk, which I think was to promote action to help reduce and ultimately stop discrimination within the industry and how as mostly privileged members of the community, i.e. not sufferers of discrimination, we are in a position to make an impact. It also highlighted how just because you might not suffer from the issues she discussed, that does not mean that they do not exist and aren’t the cause of suffering for others within the industry.&lt;/p&gt;
 
-&lt;p&gt;My gripe with this talk however was with what I felt was a very negative and sweeping criticism of the industry and everyone in it. The content and delivery of the first half of the talk seemed to suggest that the whole industry was racist, sexist, homophobic, plus more, and completely ignored any efforts to improve this situation or acknowledge that they existed. I also didn’t agree that every company or individual in the industry fit in to this description and the suggestion that they did is something that I don’t think is fair to anybody, including those people who could be traditionally discriminated against yet are very happy and equally treated in their role. I think this perhaps a case of points of view. From a positive one, I think we should be encouraging more equality through those that already practice it instead of negatively targeting those don’t and approaching it from that angle.&lt;/p&gt;
+&lt;p&gt;My gripe with this talk however was with what I felt was a very negative and sweeping criticism of the industry and everyone in it. The content and delivery of the first half of the talk seemed to suggest that the whole industry was racist, sexist, homophobic, plus more, and completely ignored any efforts to improve this situation or acknowledge that they existed. I also didn’t agree that every company or individual in the industry fit in to this description and the suggestion that they did is something that I don’t think is fair to anybody, including those people who could be traditionally discriminated against yet are very happy and equally treated in their role. I think this is perhaps a case of points of view. From a positive one, I think we should be encouraging more equality through those that already practice it instead of negatively targeting those that don’t and approaching it from that angle.&lt;/p&gt;
 
 &lt;p&gt;In general I think any talk that highlights any form of discrimination or inequality is worth it purely for the potential for increased awareness and Lena did finish the talk on a positive note with steps we could all take to improve the situation, but my impression of the talk was marred by the its delivery and focus.&lt;/p&gt;
+
 </description>
         <pubDate>Sun, 29 May 2016 14:24:23 +0100</pubDate>
-        <link>http://jtudsbury.com/blog/talks/2016/05/29/upfront-conference-2016-my-takeaways.html</link>
-        <guid isPermaLink="true">http://jtudsbury.com/blog/talks/2016/05/29/upfront-conference-2016-my-takeaways.html</guid>
+        <link>http://127.0.0.1:4000/posts/talks/2016/05/29/upfront-conference-2016-my-takeaways.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/posts/talks/2016/05/29/upfront-conference-2016-my-takeaways.html</guid>
         
         
-        <category>blog</category>
+        <category>posts</category>
         
         <category>talks</category>
         

@@ -9,10 +9,10 @@
   <title>Upfront conf 2016 - my takeaways | Portfolio of James Tudsbury, Manchester based web developer</title>
   <meta name="description" content="I attended my first Upfront conference a couple of days ago, and though I’ve been to various talks and mini conferences, this was probably my first ever “pro...">
 
-  <link rel="stylesheet" href="/css/main.css?bust=1464715828">
+  <link rel="stylesheet" href="/css/main.css?bust=1467825717">
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700|Hind:300,500' rel='stylesheet' type='text/css'>
-  <link rel="canonical" href="http://jtudsbury.com/blog/talks/2016/05/29/upfront-conference-2016-my-takeaways.html">
-  <link rel="alternate" type="application/rss+xml" title="James Tudsbury - Web Developer" href="http://jtudsbury.com/feed.xml">
+  <link rel="canonical" href="http://127.0.0.1:4000/posts/talks/2016/05/29/upfront-conference-2016-my-takeaways.html">
+  <link rel="alternate" type="application/rss+xml" title="James Tudsbury - Web Developer" href="http://127.0.0.1:4000/feed.xml">
   <link rel="shortcut icon" href="http://jtudsbury.com/favicon_v2.ico" />
 </head>
 
@@ -22,7 +22,7 @@
     <header class="site-header">
 
   
-    <a class="icon icon--home-yellow home-link" href="http://jtudsbury.com"><span class="visuallyhidden">Home</span></a>
+    <a class="icon icon--home-yellow home-link" href="http://127.0.0.1:4000"><span class="visuallyhidden">Home</span></a>
   
 
   <div class="hero">
@@ -47,7 +47,7 @@
   
     <div class="site-nav-wrapper">
       <nav class="site-nav site-nav--single">
-        <a class="site-nav__link" href="http://jtudsbury.com/">Back to home</a>
+        <a class="site-nav__link" href="http://127.0.0.1:4000/">Back to home</a>
       </nav>
     </div><!--/.site-nav-wrapper -->
   
@@ -69,7 +69,7 @@
 		    <p>I attended my first Upfront conference a couple of days ago, and though I’ve been to various talks and mini conferences, this was probably my first ever “proper” web conference. It was packed full of great speakers and ideas which I have noted down at the time and remembered since to varying effect. Here are some of my thoughts on the talks and what I’ve taken away from it all.</p>
 
 <h3 id="a-field-guide-to-web-accessibility---derek-featherstone-featherhttpstwittercomfeather">“A field guide to web accessibility” - Derek Featherstone <a href="https://twitter.com/feather">@feather</a></h3>
-<p>This was a very enjoyable talk on what is often seen as a bit of a dull topic in the web community. Derek related accessibility issues to his own life and the life’s of the people around him (his father in laws desktop was a sight to behold). The key thing I took from this talk was that writing accessible code does not equal accessible websites. It is a great first step but a site doesn’t need to be just coded with accessibility in mind, it has to be designed that way too.</p>
+<p>This was a very enjoyable talk on what is often seen as a bit of a dull topic in the web community. Derek related accessibility issues to his own life and the lives of the people around him (his father in laws desktop was a sight to behold). The key thing I took from this talk was that writing accessible code does not equal accessible websites. It is a great first step but a site doesn’t need to be just coded with accessibility in mind, it has to be designed that way too.</p>
 
 <p>Derek invited the audience to do the straw test, which is where you take your fist and hold it as if you were holding a straw, and then look through the gap at a web page and attempt to use the page. It demonstrated how an accessible form in a coding sense was still very difficult to use as the labels and inputs were laid out so far apart. Simply moving the inputs underneath the labels made using the form under the conditions of the straw test much easier. A good rule of thumb is that good accessibility = good design so considering accessibility from a design point of view can help the design along quite a lot.</p>
 
@@ -78,7 +78,7 @@
 
 <p>I have used a similar idea to this on a few of my projects. I often use a class called <code class="highlighter-rouge">.panel</code> in which I’ll add some top and bottom padding and then have modifier classes for things like background colours, e.g. <code class="highlighter-rouge">.panel--background-red</code>. I was finding that when variations of the panel class existed I was attaching content specific classes such as <code class="highlighter-rouge">.panel--product</code> in order to achieve the different design. This meant that the <code class="highlighter-rouge">.panel--product</code> class then couldn’t be used on anything that wasn’t a product, or it could but it wouldn’t make sense. So I wanted a generic name in the context of the site (or design system) but a name that could have meaning to the developer. With this in mind I started using city names as panel modifier classes, e.g. <code class="highlighter-rouge">.panel--moscow</code>. This had no meaning in the context of the site but a developer could look it and know what styles a Moscow panel contained.</p>
 
-<p>I digress. My main takeaway from this talk wasn’t the naming conventions described above, it was naming exercise that Charlotte explained. She has <a href="http://alistapart.com/article/from-pages-to-patterns-an-exercise-for-everyone">written about it on A List Apart</a> and I would highly recommend checking it out in detail. To summarise, the exercise involves getting people involved in the project, which means everyone from developers to clients to project managers. You print out the site designs and as a group cut out every component that you find and group similar components together. Then you each come up with a name for the components and see what patterns emerge. I think this is a great way to really define what a component is in your design and name it accordingly rather than giving that task solely to a developer, who has their own biases. To go further with this, a group of developers (or anyone comfortable with code) could make a timeboxed attempt at coding up the component to achieve a similar result. You can assess the results and look for patterns to get an idea on the best way to set a component up in the code.</p>
+<p>I digress. My main takeaway from this talk wasn’t the naming conventions described above, it was naming exercise that Charlotte explained. She has <a href="http://alistapart.com/article/from-pages-to-patterns-an-exercise-for-everyone">written about it on A List Apart</a> and I would highly recommend checking it out in detail. To summarise, the exercise involves getting the people involved in the project, which means everyone from developers to clients to project managers, you print out the site designs and as a group cut out every component that you find and group similar components together. Then you each come up with a name for the components and see what patterns emerge. I think this is a great way to really define what a component is in your design and name it accordingly rather than giving that task solely to a developer, who has their own biases. To go further with this, a group of developers (or anyone comfortable with code) could make a timeboxed attempt at coding up the component to achieve a similar result. You can assess the results and look for patterns to get an idea on the best way to set a component up in the code.</p>
 
 <p>My main takeway from this talk was definitely the exercise. I can definitely see myself using this and I think it’d be a great exercise to do with some front end developers and designers in the near future. I think you could do this exercise on new/existing projects that you work on or even just pick a website that you have no involvement in. Either way will start to get your mind thinking in a design system / component way.</p>
 
@@ -88,7 +88,7 @@
 <p>My takeaways from this were that you can always start from scratch and make a new shiny thing, but it’s going to be outdated and some other developers pain in the arse at some point just like it was yours. Starting from scratch doesn’t come without risk (in fact there is a lot of risk involved) and using the latest and greatest framework/library/thing doesn’t automatically make a project great or future proof.</p>
 
 <h3 id="i-am-grout---peter-gasston-stopsatgreenhttpstwittercomstopsatgreen">“I am grout” - Peter Gasston <a href="https://twitter.com/stopsatgreen">@stopsatgreen</a></h3>
-<p>Peters talk was all about how the web is dead and how we should give up (kind of / not). This talk really put in to context the current landscape of the web and the potential threats that it faces. Publishers are now turning away from the web and hosting their content on Facebook, Medium and native device platforms. There was a remarkable point about how for a lot of people, the web is just Facebook and actually a lot of people Facebook users don’t know what the web is. This was for a couple of reasons, some people just have all the content that they’d ever want on Facebook. News, pictures, videos, social, it’s all served up on a platter on Facebook. Then some people turn to it for the performance gains. The cost of using the web in developing countries is high so users in these countries turn to Facebook where content is a lot more optimised than it is on the web (generally) and they get a lot more for their money.</p>
+<p>Peters talk was all about how the web is dead and how we should give up (kind of / not). This talk really put in to context the current landscape of the web and the potential threats that it faces. Publishers are now turning away from the web and hosting their content on Facebook, Medium and native device platforms. There was a remarkable point about how for a lot of people, the web is just Facebook and actually a lot of people who are Facebook users don’t know what the web is. This was for a couple of reasons, some people just have all the content that they’d ever want on Facebook. News, pictures, videos, social, it’s all served up on a platter on Facebook. Then some people turn to it for the performance gains. The cost of using the web in developing countries is high so users in these countries turn to Facebook where content is a lot more optimised than it is on the web (generally) and they get a lot more for their money.</p>
 
 <p>Thankfully the web isn’t completely dead, but it could be if we don’t look after it. Things like progressive web apps and caring about performance on our websites means that there is hope for the web but just because the web won once doesn’t mean it will again. This is quite a worrying thought and I think the web could well be in significant danger, however there is some great people working on the web doing some great things and though I don’t think the mere existence of these people means the web will thrive, I think it gives it a fighting chance and we should all play our part on improving and advocating it.</p>
 
@@ -105,9 +105,10 @@
 <h3 id="works-on-my-machine-or-the-problem-is-between-keyboard-and-chair---lena-reinhard-lrnrdhttpstwittercomlrnrd">“Works on my machine, or the problem is between keyboard and chair” - Lena Reinhard <a href="https://twitter.com/lrnrd">@lrnrd</a></h3>
 <p>I would say that this was the most thought provoking and certainly hard hitting talk of the day. In a nutshell, this talk was about various forms of discrimination within the tech industry and how we as contributors to that industry and members of that community/society should do more to stop it and prevent it from happening. I agreed with the overall point of this talk, which I think was to promote action to help reduce and ultimately stop discrimination within the industry and how as mostly privileged members of the community, i.e. not sufferers of discrimination, we are in a position to make an impact. It also highlighted how just because you might not suffer from the issues she discussed, that does not mean that they do not exist and aren’t the cause of suffering for others within the industry.</p>
 
-<p>My gripe with this talk however was with what I felt was a very negative and sweeping criticism of the industry and everyone in it. The content and delivery of the first half of the talk seemed to suggest that the whole industry was racist, sexist, homophobic, plus more, and completely ignored any efforts to improve this situation or acknowledge that they existed. I also didn’t agree that every company or individual in the industry fit in to this description and the suggestion that they did is something that I don’t think is fair to anybody, including those people who could be traditionally discriminated against yet are very happy and equally treated in their role. I think this perhaps a case of points of view. From a positive one, I think we should be encouraging more equality through those that already practice it instead of negatively targeting those don’t and approaching it from that angle.</p>
+<p>My gripe with this talk however was with what I felt was a very negative and sweeping criticism of the industry and everyone in it. The content and delivery of the first half of the talk seemed to suggest that the whole industry was racist, sexist, homophobic, plus more, and completely ignored any efforts to improve this situation or acknowledge that they existed. I also didn’t agree that every company or individual in the industry fit in to this description and the suggestion that they did is something that I don’t think is fair to anybody, including those people who could be traditionally discriminated against yet are very happy and equally treated in their role. I think this is perhaps a case of points of view. From a positive one, I think we should be encouraging more equality through those that already practice it instead of negatively targeting those that don’t and approaching it from that angle.</p>
 
 <p>In general I think any talk that highlights any form of discrimination or inequality is worth it purely for the potential for increased awareness and Lena did finish the talk on a positive note with steps we could all take to improve the situation, but my impression of the talk was marred by the its delivery and focus.</p>
+
 
 		  </div>
 
@@ -119,7 +120,7 @@
 
     
   <nav class="site-nav site-nav--footer">
-      <a class="site-nav__link" href="#">Back to top</a><a class="site-nav__link" href="http://jtudsbury.com/">Back to home</a>
+      <a class="site-nav__link" href="#">Back to top</a><a class="site-nav__link" href="http://127.0.0.1:4000/">Back to home</a>
     </nav>
 
 
