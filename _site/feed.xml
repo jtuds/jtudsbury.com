@@ -5,8 +5,8 @@
     <description>Portfolio of Manchester based front end web developer James Tudsbury.</description>
     <link>http://127.0.0.1:4000/</link>
     <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Jul 2016 08:28:57 +0100</pubDate>
-    <lastBuildDate>Thu, 14 Jul 2016 08:28:57 +0100</lastBuildDate>
+    <pubDate>Thu, 14 Jul 2016 08:35:23 +0100</pubDate>
+    <lastBuildDate>Thu, 14 Jul 2016 08:35:23 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -149,16 +149,16 @@
 
 &lt;p&gt;If you’re not finding your class names difficult to name, scale, or reuse then this solution is probably irrelevant. But if you are then it could be a good technique to try out and experiment with. Good luck!&lt;/p&gt;
 </description>
-        <pubDate>Thu, 14 Jul 2016 08:15:23 +0100</pubDate>
-        <link>http://127.0.0.1:4000/posts/css/sass/2016/07/14/generic-naming-in-css.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/posts/css/sass/2016/07/14/generic-naming-in-css.html</guid>
+        <pubDate>Wed, 13 Jul 2016 08:15:23 +0100</pubDate>
+        <link>http://127.0.0.1:4000/posts/css/sas/2016/07/13/generic-naming-in-css.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/posts/css/sas/2016/07/13/generic-naming-in-css.html</guid>
         
         
         <category>posts</category>
         
         <category>css</category>
         
-        <category>sass</category>
+        <category>sas</category>
         
       </item>
     
