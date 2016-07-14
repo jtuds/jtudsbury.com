@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Generic naming in CSS"
-date:   2016-07-13 07:15:23 +0000
-categories: posts css sass
+date:   2016-07-13 18:15:23 +0000
+categories: posts
 ---
 
 Naming stuff in CSS is easy. If you forget about reusability, DRY (don't repeat yourself), OOCSS (object orientated CSS), component based CSS, and reusable patterns, then it really is easy. Class names such as `.homepage-article-big`, `.homepage-article-big-alt` and `.homepage-article-big-alt-2` mean you can add classes and tailor them to your hearts content without ever really considering what a good name might constitute. If you do care about all those things I mentioned, and you probably should if you want to build a scalable and future proof design system, then naming stuff in CSS isn't easy, it's really really hard.
