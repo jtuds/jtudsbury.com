@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Generic naming in CSS"
-date:   2016-07-14 07:15:23 +0000
+date:   2016-07-13 07:15:23 +0000
 categories: posts css sass
 ---
 
