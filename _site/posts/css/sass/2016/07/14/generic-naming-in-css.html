@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Generic naming in CSS | Portfolio of James Tudsbury, Manchester based web developer</title>
+  <meta name="description" content="Naming stuff in CSS is easy. If you forget about reusability, DRY (don’t repeat yourself), OOCSS (object orientated CSS), component based CSS, and reusable p...">
+
+  <link rel="stylesheet" href="/css/main.css?bust=1468481337">
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700|Hind:300,500' rel='stylesheet' type='text/css'>
+  <link rel="canonical" href="http://127.0.0.1:4000/posts/css/sass/2016/07/14/generic-naming-in-css.html">
+  <link rel="alternate" type="application/rss+xml" title="James Tudsbury - Web Developer" href="http://127.0.0.1:4000/feed.xml">
+  <link rel="shortcut icon" href="http://jtudsbury.com/favicon_v2.ico" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  
+    <a class="icon icon--home-yellow home-link" href="http://127.0.0.1:4000"><span class="visuallyhidden">Home</span></a>
+  
+
+  <div class="hero">
+
+    <div class="hero__text-wrapper">
+      <div class="wrapper">
+        <h1 class="hero__text">James Tudsbury
+          <div class="rotating-words">
+            <span>Front end developer<span class="visuallyhidden">, </span></span>
+            <span>Backend dabbler<span class="visuallyhidden">, </span></span>
+            <span>User behaviour enthusiast<span class="visuallyhidden">, </span></span>
+            <span>Designer<span class="visuallyhidden">, </span></span>
+            <span>Web lover<span class="visuallyhidden">, </span></span>
+            <span>Mountain jumper<span class="visuallyhidden">.</span></span>
+          </div>
+        </h1>
+      </div><!--/.wrapper -->
+    </div><!--/.hero__text-wrapper -->
+
+  </div><!--/.hero -->
+
+  
+    <div class="site-nav-wrapper">
+      <nav class="site-nav site-nav--single">
+        <a class="site-nav__link" href="http://127.0.0.1:4000/">Back to home</a>
+      </nav>
+    </div><!--/.site-nav-wrapper -->
+  
+
+</header>
+
+
+    <div class="page-content">
+      <div class="panel">
+	<div class="wrapper">
+		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+		  <header class="post-header">
+		    <h1 class="post-title" itemprop="name headline">Generic naming in CSS</h1>
+		    <p class="post-meta"><time datetime="2016-07-14T08:15:23+01:00" itemprop="datePublished">Jul 14, 2016</time></p>
+		  </header>
+
+		  <div class="post-content" itemprop="articleBody">
+		    <p>Naming stuff in CSS is easy. If you forget about reusability, DRY (don’t repeat yourself), OOCSS (object orientated CSS), component based CSS, and reusable patterns, then it really is easy. Class names such as <code class="highlighter-rouge">.homepage-article-big</code>, <code class="highlighter-rouge">.homepage-article-big-alt</code> and <code class="highlighter-rouge">.homepage-article-big-alt-2</code> mean you can add classes and tailor them to your hearts content without ever really considering what a good name might constitute. If you do care about all those things I mentioned, and you probably should if you want to build a scalable and future proof design system, then naming stuff in CSS isn’t easy, it’s really really hard.</p>
+
+<p>Of course this is nothing new and it’s a well documented issue with plenty of <a href="https://seesparkbox.com/foundry/naming_css_stuff_is_really_hard">articles</a>, discussions, methodologies and techniques devised to help with it. One of the biggest helps I have come across in recent years is the <a href="http://getbem.com/">BEM methodology</a>. I won’t go in to it in detail here because it has already been explained in numerous articles but if you haven’t heard of it I would recommend starting with <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">Harry Robert’s article on the subject</a>. In summary, BEM gives you a structured way to name your CSS classes. Most importantly it forces you to think about what type of class something is. Is it a block, a top level class that will encompass other classes, e.g. <code class="highlighter-rouge">.human</code>? Is it an element, a child of the block, e.g. <code class="highlighter-rouge">.human__eye</code>? Or is it a modifier, something that is a variation of the element, e.g. <code class="highlighter-rouge">.human__eye--blue</code>? Thinking in this way, or in the way of any of the other methodologies such as OOCSS (and they can all work together, mostly) means that your class names are probably pretty good and you’re avoiding code like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.about-section {}
+.homepage.about-section {}
+.contact-page.about-section {}
+.contact-page.about-section-alt {}
+</code></pre>
+</div>
+
+<p>The above code will do a job, but it’s not reusable, it’s hard to maintain, and it’s probably going to break at some point.</p>
+
+<h3 id="possible-solutions">Possible solutions</h3>
+<p>The issue I have come across on multiple projects and for some time now is what to name things that are similar, but not similar enough to be the same block or component. For example I might have a class called <code class="highlighter-rouge">.card</code> which has some padding, a border radius and a box shadow. This is all fine because I can add those styles to my <code class="highlighter-rouge">.card</code> class like so:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.card {
+	padding:20px;
+	box-shadow: 1px 1px 1px #000;
+	border-radius:2px;
+}
+</code></pre>
+</div>
+
+<p>If I then have a component very much like <code class="highlighter-rouge">.card</code> but needs less padding, then I have to identify that somehow. You could add a class like <code class="highlighter-rouge">.card--small</code> which adds a modifier on to the card class to signify that it is small. Then your CSS would look something like:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.card--small {
+	padding:10px;
+}
+</code></pre>
+</div>
+
+<p>This variation of <code class="highlighter-rouge">.card</code> might also require some extra margin, a border, and a transition. This is the point at which our variation of <code class="highlighter-rouge">.card</code>, though very similar in looks, is starting to become a different thing in code. You could continue to use modifiers in a few different ways. The first of which is to name the modifier based on what the modification is doing like:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.card--margin {
+	margin:10px;
+}
+
+.card--border {
+	border:1px solid red;
+}
+
+.card--has-transition {
+	transition: all 0.2s;
+}
+</code></pre>
+</div>
+
+<p>This method becomes an issue for a few reasons but for me most noticeably when using media queries. If I don’t want my card to have a border at less than 600px then at less than 600px my <code class="highlighter-rouge">.card--border</code> class makes no sense.</p>
+
+<p>The second way to continue to use modifiers is to not reference the modification directly but do something like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.card--alt {
+	margin:10px;
+	border:1px solid red;
+	transition: all 0.2s;
+}
+</code></pre>
+</div>
+
+<p>This works fine until you have another component similar to <code class="highlighter-rouge">.card</code> but not quite the same. What do you name that? <code class="highlighter-rouge">.card--alt-2</code>? It’s very convoluted.</p>
+
+<p>You could use a hierarchical based naming system such as:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.card--primary {
+	padding:10px;
+}
+
+.card--secondary {
+	margin:10px;
+	border:1px solid red;
+	transition: all 0.2s;
+}
+
+.card--tertiary {
+	more styles for your other variant of card
+}
+</code></pre>
+</div>
+
+<p>This isn’t too bad in my opinion but typing out “quaternary” isn’t fun and I don’t even know the name for the fifth item in that hierarchical naming system. The other issue with this is that it is a lie. <code class="highlighter-rouge">.card--secondary</code> is of no less importance or less deserving of a primary label than <code class="highlighter-rouge">.card--primary</code> is. The meaning inferred via hierarchical labeling isn’t actually an accurate representation of the components it is being used on.</p>
+
+<p>Finally, you could relate the class to the context in which it is being used like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.card--product {
+	padding:10px;
+}
+
+.card--article-list {
+	margin:10px;
+	border:1px solid red;
+	transition: all 0.2s;
+}
+</code></pre>
+</div>
+
+<p>This works up until the point where your <code class="highlighter-rouge">.card--product</code> class is required away from a product page (or component). At which point you have to consider renaming the class, or copying the styles within it in to a newly named class, which goes against the DRY principle.</p>
+
+<h3 id="an-alternative-solution">An alternative solution</h3>
+<p>So this brings me to the point of this post, a proposed, alternative solution. As a developer what I would like the following from my class names;</p>
+
+<ul>
+  <li>They are not a representation of the styles within it (such as <code class="highlighter-rouge">.card--margin</code>), because styles can change</li>
+  <li>They do not follow a hierarchical naming system, because this adds a layer of meaning that won’t always truly represent the class</li>
+  <li>They can be extended upon without convoluted naming (such as <code class="highlighter-rouge">.card--alt-2</code>)</li>
+  <li>They can be uniquely identified in a meaningful way. Words are meaningful to me and can be shared, codes and numbers cannot</li>
+  <li>They can be reused anywhere and are not tied to context</li>
+</ul>
+
+<p>The idea I have been using to satisfy these requirements is something I’ll memorably call “generic yet meaningful” naming. The idea is to give your class names a theme that is unrelated to the code itself and any context it may be used in. For example, say I’m working on a website for a fashion retailer, I could take my card component and call it <code class="highlighter-rouge">.card-athens</code>. Athens is obviously a city and has nothing directly to do with fashion and it has nothing to do with the styles that I put inside of that element. But it allows me to give the component a name that I can reference, and that others can reference. It attaches meaning to the class, without attaching too much meaning or context. I can reuse <code class="highlighter-rouge">.card-athens</code> anywhere within the site, regardless of context and it makes sense. I can also extend this class quite easily for when I have similar components that are different in code. According to Google and the World Atlas, there are 4,416 cities in the world. That’s a lot of names you have at your disposable (though you probably, definitely, shouldn’t have 4,416 card components, but that’s another post), you can create 4,416 card components that are all different and have a different identifier but which are much more meaningful to humans than numbers or an ID code.</p>
+
+<p>Let’s get in to some examples of this in use, firstly on one of my own projects. The city theme is something I have used on a past project. Here is an example of it in use:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.panel {
+	padding-top:40px;
+}
+
+.panel--athens {
+	padding-top:60px;
+}
+
+.panel--athens__heading {
+	
+	@media (min-width:$medium) {
+		text-align:right;
+	}
+}
+</code></pre>
+</div>
+
+<p>This is quite a straightforward example. All I’m doing is giving the panel some additional padding to the padding set on <code class="highlighter-rouge">.panel</code> and aligning the heading to the right after a certain breakpoint. This means I can have other panels without a heading aligned right, or with the heading aligned center, or with it positioned absolutely to the top of the page (for some reason), simply by having a different city name class. It also means I don’t have to use something like <code class="highlighter-rouge">.panel__heading--right</code> because before the medium breakpoint is hit, that class makes no sense. Finally, it means I can use those styles anywhere within the site and they make sense because they aren’t tied to content or context.</p>
+
+<p>This is a technique that I have seen mentioned and used elsewhere in the wild. I attended a talk by Charlotte Jackson <a href="https://twitter.com/Lottejackson">@lottejackson</a> from <a href="http://clearleft.com/">Clearleft</a> where she mentioned using classes such as <code class="highlighter-rouge">.pump</code> and <code class="highlighter-rouge">.tire</code> on a bicycle website she was working on. This was in the context of a talk about how to name components to create a design pattern rather than simply just a page. As mentioned in a previous post, there is a <a href="http://alistapart.com/article/from-pages-to-patterns-an-exercise-for-everyone">good article on that subject over on A List Apart</a>.</p>
+
+<p>I have also seen it being used on the BBC website, particularly in the sports section. They have gone for the theme of sporting venues for their generic naming with classes such as <code class="highlighter-rouge">.anfield</code> and <code class="highlighter-rouge">.lakeside</code>. I had a very brief Twitter chat with <a href="https://twitter.com/@shaunbent">Shaun Bent</a> who is a developer there and he very succinctly said that he found the technique has, “stopped patterns from being named and designed for a single use-case, meaning you get better reuse out of them”. On the flip side he said that they have found pattern bloat to be an issue, with many patterns becoming redundant. This is probably a byproduct of having so many generic names available and being able to separate each one from any other, meaning you can continue to add them without any adverse effects on existing components/patterns and without having to put too much thought in to a new name. This is something you have to look out for not just as a developer but as a designer. You have to be watchful of a design system becoming too big and having too many components. They shouldn’t just be bolted on as and when. I think constantly questioning and reviewing any new additions is a good approach to take. Don’t just add them because you can, ask why first and check you haven’t already got something that does a very similar job and whether adding another component would actually harm the consistency of the whole design.</p>
+
+<p>If you’re not finding your class names difficult to name, scale, or reuse then this solution is probably irrelevant. But if you are then it could be a good technique to try out and experiment with. Good luck!</p>
+
+		  </div>
+
+		</article>
+	</div><!-- end .wrapper -->
+</div><!-- end .panel -->
+
+    </div>
+
+    
+  <nav class="site-nav site-nav--footer">
+      <a class="site-nav__link" href="#">Back to top</a><a class="site-nav__link" href="http://127.0.0.1:4000/">Back to home</a>
+    </nav>
+
+
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <p>Email: <a href="mailto:james@jtudsbury.com">james@jtudsbury.com</a> | Twitter: <a href="https://twitter.com/@jtuds">@jtuds</a> | Icons by <a href="http://www.freepik.com" title="Freepik">Freepik</a> and <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-34770509-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+
+</html>

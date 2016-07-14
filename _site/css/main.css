@@ -397,6 +397,9 @@ pre {
   .highlight .il {
     color: #099; }
 
+pre.highlight {
+  margin: 30px; }
+
 /**
  * Grids
  */

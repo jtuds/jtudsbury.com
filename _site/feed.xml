@@ -5,15 +5,15 @@
     <description>Portfolio of Manchester based front end web developer James Tudsbury.</description>
     <link>http://127.0.0.1:4000/</link>
     <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jul 2016 18:21:57 +0100</pubDate>
-    <lastBuildDate>Wed, 06 Jul 2016 18:21:57 +0100</lastBuildDate>
+    <pubDate>Thu, 14 Jul 2016 08:28:57 +0100</pubDate>
+    <lastBuildDate>Thu, 14 Jul 2016 08:28:57 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>WIP - Naming stuff in CSS</title>
-        <description>&lt;p&gt;Naming stuff in CSS is easy. If you forget about reusability, DRY (don’t repeat yourself), OOCSS (object orientated CSS), component based CSS, and reusable patterns, then it really is easy. Class names such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage-article-big&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage-article-big-alt&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage-article-big-alt-2&lt;/code&gt; mean you can add classes and tailor them till your hearts content without ever really considering what a good name might constitute. If you do care about all those things I mentioned, and you probably should if you want to build a scalable and future proof design system, then naming stuff in CSS isn’t easy, it’s really really hard.&lt;/p&gt;
+        <title>Generic naming in CSS</title>
+        <description>&lt;p&gt;Naming stuff in CSS is easy. If you forget about reusability, DRY (don’t repeat yourself), OOCSS (object orientated CSS), component based CSS, and reusable patterns, then it really is easy. Class names such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage-article-big&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage-article-big-alt&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.homepage-article-big-alt-2&lt;/code&gt; mean you can add classes and tailor them to your hearts content without ever really considering what a good name might constitute. If you do care about all those things I mentioned, and you probably should if you want to build a scalable and future proof design system, then naming stuff in CSS isn’t easy, it’s really really hard.&lt;/p&gt;
 
-&lt;p&gt;Of course this is nothing new and it’s a well documented issue with plenty of articles, discussions, methodologies and techniques devised to help with it. One of the biggest helps I have come across in recent years is the BEM methodology. I won’t go in to it in detail here because it has already been explained in numerous articles but if you haven’t heard of it I would recommend starting with &lt;a href=&quot;http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/&quot;&gt;Harry Robert’s article on the subject&lt;/a&gt;. In summary, BEM gives you a structured way to name your CSS classes. Most importantly it forces you to think about what type of class something is. Is it a block, a top level class that will encompass other classes, e.g. “.human”? Is it an element, a child of the block, e.g. “.human__eye”? Or is it a modifier, something that is a variation of the element, e.g. “.human__eye–blue”? Thinking in this way, or in the way of any of the other methodologies such as OOCSS (and they can all work together, mostly) means that your class names are probably pretty good and you’re avoiding code like this&lt;/p&gt;
+&lt;p&gt;Of course this is nothing new and it’s a well documented issue with plenty of &lt;a href=&quot;https://seesparkbox.com/foundry/naming_css_stuff_is_really_hard&quot;&gt;articles&lt;/a&gt;, discussions, methodologies and techniques devised to help with it. One of the biggest helps I have come across in recent years is the &lt;a href=&quot;http://getbem.com/&quot;&gt;BEM methodology&lt;/a&gt;. I won’t go in to it in detail here because it has already been explained in numerous articles but if you haven’t heard of it I would recommend starting with &lt;a href=&quot;http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/&quot;&gt;Harry Robert’s article on the subject&lt;/a&gt;. In summary, BEM gives you a structured way to name your CSS classes. Most importantly it forces you to think about what type of class something is. Is it a block, a top level class that will encompass other classes, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;.human&lt;/code&gt;? Is it an element, a child of the block, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;.human__eye&lt;/code&gt;? Or is it a modifier, something that is a variation of the element, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;.human__eye--blue&lt;/code&gt;? Thinking in this way, or in the way of any of the other methodologies such as OOCSS (and they can all work together, mostly) means that your class names are probably pretty good and you’re avoiding code like this:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.about-section {}
 .homepage.about-section {}
@@ -24,7 +24,8 @@
 
 &lt;p&gt;The above code will do a job, but it’s not reusable, it’s hard to maintain, and it’s probably going to break at some point.&lt;/p&gt;
 
-&lt;p&gt;The issue I have come across on multiple projects and for some time now is what to name things that are similar, but not similar enough to be the same block or component. For example I might have a class called ‘.card’ which has some padding, a border radius and a box shadow. This is all fine because I can add those styles to my &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; class like so&lt;/p&gt;
+&lt;h3 id=&quot;possible-solutions&quot;&gt;Possible solutions&lt;/h3&gt;
+&lt;p&gt;The issue I have come across on multiple projects and for some time now is what to name things that are similar, but not similar enough to be the same block or component. For example I might have a class called &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; which has some padding, a border radius and a box shadow. This is all fine because I can add those styles to my &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; class like so:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card {
 	padding:20px;
@@ -34,7 +35,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;If I then have a component very much like &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; but need less padding I have to identify that somehow. You could add a class like &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--small&lt;/code&gt; which adds a modifier on to the card class to signify that it is small. Then your CSS would look something like&lt;/p&gt;
+&lt;p&gt;If I then have a component very much like &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; but needs less padding, then I have to identify that somehow. You could add a class like &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--small&lt;/code&gt; which adds a modifier on to the card class to signify that it is small. Then your CSS would look something like:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card--small {
 	padding:10px;
@@ -42,7 +43,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;This variation of &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; might also require some extra margin, a border, and a transition. This is the point at which our variation of &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt;, though very similar in looks, is starting to become a different thing in code. You could continue to use modifiers in a few different ways. The first of which is to name the modifier based on what the modification is doing like&lt;/p&gt;
+&lt;p&gt;This variation of &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; might also require some extra margin, a border, and a transition. This is the point at which our variation of &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt;, though very similar in looks, is starting to become a different thing in code. You could continue to use modifiers in a few different ways. The first of which is to name the modifier based on what the modification is doing like:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card--margin {
 	margin:10px;
@@ -58,9 +59,9 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;This method becomes an issue for me most noticeably when using media queries. If I don’t want my card to have a border at less than 600px then at less than 600px my &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--border&lt;/code&gt; class makes no sense.&lt;/p&gt;
+&lt;p&gt;This method becomes an issue for a few reasons but for me most noticeably when using media queries. If I don’t want my card to have a border at less than 600px then at less than 600px my &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--border&lt;/code&gt; class makes no sense.&lt;/p&gt;
 
-&lt;p&gt;The second way to continue to use modifiers is to not reference the modification directly but do something like this&lt;/p&gt;
+&lt;p&gt;The second way to continue to use modifiers is to not reference the modification directly but do something like this:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card--alt {
 	margin:10px;
@@ -72,7 +73,7 @@
 
 &lt;p&gt;This works fine until you have another component similar to &lt;code class=&quot;highlighter-rouge&quot;&gt;.card&lt;/code&gt; but not quite the same. What do you name that? &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--alt-2&lt;/code&gt;? It’s very convoluted.&lt;/p&gt;
 
-&lt;p&gt;You could use a hierarchical based naming system such as&lt;/p&gt;
+&lt;p&gt;You could use a hierarchical based naming system such as:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card--primary {
 	padding:10px;
@@ -90,9 +91,9 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;This isn’t too bad in my opinion but typing out “quaternary” isn’t fun and I don’t even know the name for the fifth item in that hierarchical naming system. The other issue with this is that it is a lie. &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--secondary&lt;/code&gt; is of not less importance or less deserving of a primary label than &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--primary&lt;/code&gt;. The hierarchical labeling isn’t actually a representation of the components it is being used on.&lt;/p&gt;
+&lt;p&gt;This isn’t too bad in my opinion but typing out “quaternary” isn’t fun and I don’t even know the name for the fifth item in that hierarchical naming system. The other issue with this is that it is a lie. &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--secondary&lt;/code&gt; is of no less importance or less deserving of a primary label than &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--primary&lt;/code&gt; is. The meaning inferred via hierarchical labeling isn’t actually an accurate representation of the components it is being used on.&lt;/p&gt;
 
-&lt;p&gt;Finally, you could relate the class to the context in which it is being used like this&lt;/p&gt;
+&lt;p&gt;Finally, you could relate the class to the context in which it is being used like this:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.card--product {
 	padding:10px;
@@ -108,30 +109,49 @@
 
 &lt;p&gt;This works up until the point where your &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--product&lt;/code&gt; class is required away from a product page (or component). At which point you have to consider renaming the class, or copying the styles within it in to a newly named class, which goes against the DRY principle.&lt;/p&gt;
 
-&lt;p&gt;TALK ABOUT MY PARTICULAR PROBLEM WITH NAMING STUFF IN A REUSBALE WAY BUT TOO RELATED TO CONTENT - MAKES IT NOT REUSABLE&lt;/p&gt;
+&lt;h3 id=&quot;an-alternative-solution&quot;&gt;An alternative solution&lt;/h3&gt;
+&lt;p&gt;So this brings me to the point of this post, a proposed, alternative solution. As a developer what I would like the following from my class names;&lt;/p&gt;
 
-&lt;p&gt;So this brings me to the point of this post, a proposed solution. As a developer what I would like the following from my class names;
-- They are not a representation of the styles within it (such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--margin&lt;/code&gt;), because styles can change.
-- They do not follow a hierarchical naming system, because this adds a layer of meaning that won’t always truly represent the class
-- They can be extended upon without convoluted naming (such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--alt-2&lt;/code&gt;)
-- They can be uniquely identified in a meaningful way. Words are meaningful to me and can be shared, codes and numbers cannot
-- They can be reused anywhere and are not tied to context&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;They are not a representation of the styles within it (such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--margin&lt;/code&gt;), because styles can change&lt;/li&gt;
+  &lt;li&gt;They do not follow a hierarchical naming system, because this adds a layer of meaning that won’t always truly represent the class&lt;/li&gt;
+  &lt;li&gt;They can be extended upon without convoluted naming (such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.card--alt-2&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;They can be uniquely identified in a meaningful way. Words are meaningful to me and can be shared, codes and numbers cannot&lt;/li&gt;
+  &lt;li&gt;They can be reused anywhere and are not tied to context&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;The idea I have been using to satisfy these requirements is something I’ll call “INSERT GREAT NAME HERE” naming. The idea is to give your class names a theme that is unrelated to the code itself and any context it may be used in. For example, say I’m working on a website for a fashion retailer, I could take my card component and call it &lt;code class=&quot;highlighter-rouge&quot;&gt;.card-athens&lt;/code&gt;. Athens is obviously a city and has nothing directly to do with fashion and it has nothing to do with the styles that I put inside of that element. But it allows me to give the component a name that I can reference, and that others can reference. It attaches meaning to the class, without attaching too much meaning or context. I can reuse &lt;code class=&quot;highlighter-rouge&quot;&gt;.card-athens&lt;/code&gt; anywhere within the site, regardless of context and it makes sense. I can also extend this class quite easily for when I have similar components that are different in code. According to Google and the World Atlas, there are 4,416 cities in the world. That’s a lot of names you have at your disposable (though you probably, definitely, shouldn’t have 4,416 card components, but that’s another post), you can create 4,416 card components that are all different and have a different identifier but which are much more meaningful to humans than numbers or an ID code.&lt;/p&gt;
+&lt;p&gt;The idea I have been using to satisfy these requirements is something I’ll memorably call “generic yet meaningful” naming. The idea is to give your class names a theme that is unrelated to the code itself and any context it may be used in. For example, say I’m working on a website for a fashion retailer, I could take my card component and call it &lt;code class=&quot;highlighter-rouge&quot;&gt;.card-athens&lt;/code&gt;. Athens is obviously a city and has nothing directly to do with fashion and it has nothing to do with the styles that I put inside of that element. But it allows me to give the component a name that I can reference, and that others can reference. It attaches meaning to the class, without attaching too much meaning or context. I can reuse &lt;code class=&quot;highlighter-rouge&quot;&gt;.card-athens&lt;/code&gt; anywhere within the site, regardless of context and it makes sense. I can also extend this class quite easily for when I have similar components that are different in code. According to Google and the World Atlas, there are 4,416 cities in the world. That’s a lot of names you have at your disposable (though you probably, definitely, shouldn’t have 4,416 card components, but that’s another post), you can create 4,416 card components that are all different and have a different identifier but which are much more meaningful to humans than numbers or an ID code.&lt;/p&gt;
 
-&lt;p&gt;Let’s get in to some examples of SHOW EXAMPLES OF MY IDEAS AND WORK AND THEN GO IN TO IN THE WILD EXAMPLES WITH BBC AND LOTTE JACKSON&lt;/p&gt;
+&lt;p&gt;Let’s get in to some examples of this in use, firstly on one of my own projects. The city theme is something I have used on a past project. Here is an example of it in use:&lt;/p&gt;
 
-&lt;p&gt;TALK ABOUT THE SOLUTION&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.panel {
+	padding-top:40px;
+}
 
-&lt;p&gt;MENTION THE BBC AND LOTTE JACKSON&lt;/p&gt;
+.panel--athens {
+	padding-top:60px;
+}
 
-&lt;p&gt;ADD HEADINGS AND ALSO PADDING TO THE CODE SNIPPETS&lt;/p&gt;
+.panel--athens__heading {
+	
+	@media (min-width:$medium) {
+		text-align:right;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h3 id=&quot;a-field-guide-to-web-accessibility---derek-featherstone-featherhttpstwittercomfeather&quot;&gt;“A field guide to web accessibility” - Derek Featherstone &lt;a href=&quot;https://twitter.com/feather&quot;&gt;@feather&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This is quite a straightforward example. All I’m doing is giving the panel some additional padding to the padding set on &lt;code class=&quot;highlighter-rouge&quot;&gt;.panel&lt;/code&gt; and aligning the heading to the right after a certain breakpoint. This means I can have other panels without a heading aligned right, or with the heading aligned center, or with it positioned absolutely to the top of the page (for some reason), simply by having a different city name class. It also means I don’t have to use something like &lt;code class=&quot;highlighter-rouge&quot;&gt;.panel__heading--right&lt;/code&gt; because before the medium breakpoint is hit, that class makes no sense. Finally, it means I can use those styles anywhere within the site and they make sense because they aren’t tied to content or context.&lt;/p&gt;
+
+&lt;p&gt;This is a technique that I have seen mentioned and used elsewhere in the wild. I attended a talk by Charlotte Jackson &lt;a href=&quot;https://twitter.com/Lottejackson&quot;&gt;@lottejackson&lt;/a&gt; from &lt;a href=&quot;http://clearleft.com/&quot;&gt;Clearleft&lt;/a&gt; where she mentioned using classes such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.pump&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.tire&lt;/code&gt; on a bicycle website she was working on. This was in the context of a talk about how to name components to create a design pattern rather than simply just a page. As mentioned in a previous post, there is a &lt;a href=&quot;http://alistapart.com/article/from-pages-to-patterns-an-exercise-for-everyone&quot;&gt;good article on that subject over on A List Apart&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have also seen it being used on the BBC website, particularly in the sports section. They have gone for the theme of sporting venues for their generic naming with classes such as &lt;code class=&quot;highlighter-rouge&quot;&gt;.anfield&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.lakeside&lt;/code&gt;. I had a very brief Twitter chat with &lt;a href=&quot;https://twitter.com/@shaunbent&quot;&gt;Shaun Bent&lt;/a&gt; who is a developer there and he very succinctly said that he found the technique has, “stopped patterns from being named and designed for a single use-case, meaning you get better reuse out of them”. On the flip side he said that they have found pattern bloat to be an issue, with many patterns becoming redundant. This is probably a byproduct of having so many generic names available and being able to separate each one from any other, meaning you can continue to add them without any adverse effects on existing components/patterns and without having to put too much thought in to a new name. This is something you have to look out for not just as a developer but as a designer. You have to be watchful of a design system becoming too big and having too many components. They shouldn’t just be bolted on as and when. I think constantly questioning and reviewing any new additions is a good approach to take. Don’t just add them because you can, ask why first and check you haven’t already got something that does a very similar job and whether adding another component would actually harm the consistency of the whole design.&lt;/p&gt;
+
+&lt;p&gt;If you’re not finding your class names difficult to name, scale, or reuse then this solution is probably irrelevant. But if you are then it could be a good technique to try out and experiment with. Good luck!&lt;/p&gt;
 </description>
-        <pubDate>Fri, 01 Jul 2016 14:24:23 +0100</pubDate>
-        <link>http://127.0.0.1:4000/posts/css/sass/2016/07/01/wip-naming-stuff-in-css.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/posts/css/sass/2016/07/01/wip-naming-stuff-in-css.html</guid>
+        <pubDate>Thu, 14 Jul 2016 08:15:23 +0100</pubDate>
+        <link>http://127.0.0.1:4000/posts/css/sass/2016/07/14/generic-naming-in-css.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/posts/css/sass/2016/07/14/generic-naming-in-css.html</guid>
         
         
         <category>posts</category>
