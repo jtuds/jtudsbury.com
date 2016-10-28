@@ -6,7 +6,7 @@ custom_name: undisclosed-3
 category: portfolio
 ---
 
-Built and designed at <a href="https://candidsky.com">Candidsky</a>. Go to <a href="http://ampwire.co.uk">Undisclosed 3</a>.
+Built and designed at <a href="https://candidsky.com">Candidsky</a>.
 
 Undisclosed 3 is a wire work company, operating for over 20 years. They produce both off the shelf and bespoke products, ranging from safety lockers to heating guards.
 
@@ -14,11 +14,11 @@ The requirement was a unique one. The client wanted to primarily showcase their 
 
 The website also needed the option to order products as is or to customise them, aswell as a trade section where products were priced differently.
 
-<figure class="portfolio__figure portfolio__figure--screenshot">
+<!-- <figure class="portfolio__figure portfolio__figure--screenshot">
 	<img src="{{ site-url }}/images/screenshots/ampwire/homepage.jpg" data-gif="{{ site-url }}/images/screen-gifs/ampwire/ampwire.gif">
 	<button class="portfolio__figure__gif-trigger">View GIF (724 KB)</button>
 	<figcaption>The Undisclosed 3 front end.</figcaption>
-</figure>
+</figure> -->
 
 <h2>My contributions</h2>
 
