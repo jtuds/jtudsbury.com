@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Salford University | Portfolio of James Tudsbury, Manchester based web developer</title>
-  <meta name="description" content="Portfolio of Manchester based front end web developer James Tudsbury.">
+  <title>TIL - Using Array.from | Portfolio of James Tudsbury, Manchester based web developer</title>
+  <meta name="description" content="This is my first attempt at writing post based on something I have learned today (or recently), hence the name TIL. These posts are intended to be short tidb...">
 
   <link rel="stylesheet" href="/css/main.css?bust=1499327700">
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700|Hind:300,500' rel='stylesheet' type='text/css'>
-  <link rel="canonical" href="http://jtudsbury.com/experience/salford/">
+  <link rel="canonical" href="http://jtudsbury.com/posts/til/2017/07/05/til-using-array-from.html">
   <link rel="alternate" type="application/rss+xml" title="James Tudsbury - Web Developer" href="http://jtudsbury.com/feed.xml">
   <link rel="shortcut icon" href="http://jtudsbury.com/favicon_v2.ico" />
 </head>
@@ -56,26 +56,30 @@
 
 
     <div class="page-content">
-      <article class="post">
+      <div class="panel">
+	<div class="wrapper">
+		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-	<div class="panel">
-		<div class="wrapper">
-			<header class="post-header">
-				<h1 class="post-title">Salford University</h1>
-			</header>
-			<p>After graduating from University in summer 2011 I was given the chance to work with the Salford University digital team on a temporary basis in order to help them prepare for the launch of a completely overhauled Salford University website.</p>
+		  <header class="post-header">
+		    <h1 class="post-title" itemprop="name headline">TIL - Using Array.from</h1>
+		    <p class="post-meta"><time datetime="2017-07-05T10:26:23+01:00" itemprop="datePublished">Jul 5, 2017</time></p>
+		  </header>
 
-<p>I was responsible for a range of tasks, such as editing HTML templates, updating copy via the custom CMS (<a href="https://www.squiz.net/technology/cms">Squiz Matrix</a>) and editing XML files to prepare them for importing. Overall, my role was to assist in whatever way possible to get the website ready for a deadline.</p>
+		  <div class="post-content" itemprop="articleBody">
+		    <p>This is my first attempt at writing post based on something I have learned today (or recently), hence the name TIL. These posts are intended to be short tidbits of learnings and stuff I’ve picked up, partly for my own benefit and hopefully for others too!</p>
 
-<p>With around 15 people in the team and a deadline to work to I got an opportunity to experience what it was like to work in a real life digital team and to work under pressure from stakeholders. The role was originally planned to last 4 weeks, however after a weeks break I was asked back to help out again for a week, which demonstrates my value to the team at the time.</p>
+<h3 id="using-arrayfrom">Using Array.from</h3>
+<p>I have come up against an issue a few times when trying to do something with what I thought was an array but actually turned out to be array like <code class="highlighter-rouge">NodeList</code>. When working with DOM elements, using something like <code class="highlighter-rouge">querySelectorAll('.elements')</code> will return an object of the type <code class="highlighter-rouge">NodeList</code> rather than of the type <code class="highlighter-rouge">Array</code>. Some browsers don’t play too well with this when you use functions on the <code class="highlighter-rouge">NodeList</code>. For example until last year using <code class="highlighter-rouge">forEach</code> on a <code class="highlighter-rouge">NodeList</code> in Chrome wouldn’t work, because <code class="highlighter-rouge">NodeLists</code> weren’t iterable like <code class="highlighter-rouge">Arrays</code> are. There are some hacky solutions to converting array like objects to real Arrays but <code class="highlighter-rouge">Array.from</code> makes it simple, readable and concise.</p>
 
-<p>The <a href="http://www.salford.ac.uk/ug-courses/accounting-and-finance">courses pages</a> of the website remain as they were when they were launched in 2011.</p>
+<p>Let’s say we have a <code class="highlighter-rouge">NodeList</code> called <code class="highlighter-rouge">myNodeList</code>. Simply do <code class="highlighter-rouge">Array.from(myNodeList)</code> and you’ll be returned an <code class="highlighter-rouge">Array</code>.</p>
 
+<p>As browser support for doing things like using <code class="highlighter-rouge">forEach</code> on a <code class="highlighter-rouge">NodeList</code> improves, that particular use case will become less common, however you can still use it in cases such as turning a string into an array of characters, e.g. <code class="highlighter-rouge">Array.from('Hello')</code> would become <code class="highlighter-rouge">["H", "e", "l", "l", "o"]</code></p>
 
-		</div><!--/.wrapper -->
-  	</div><!--/.panel -->
+		  </div>
 
-</article>
+		</article>
+	</div><!-- end .wrapper -->
+</div><!-- end .panel -->
 
     </div>
 

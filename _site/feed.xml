@@ -5,9 +5,31 @@
     <description>Portfolio of Manchester based front end web developer James Tudsbury.</description>
     <link>http://jtudsbury.com/</link>
     <atom:link href="http://jtudsbury.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Oct 2016 21:18:22 +0100</pubDate>
-    <lastBuildDate>Fri, 28 Oct 2016 21:18:22 +0100</lastBuildDate>
+    <pubDate>Thu, 06 Jul 2017 08:55:00 +0100</pubDate>
+    <lastBuildDate>Thu, 06 Jul 2017 08:55:00 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>TIL - Using Array.from</title>
+        <description>&lt;p&gt;This is my first attempt at writing post based on something I have learned today (or recently), hence the name TIL. These posts are intended to be short tidbits of learnings and stuff I’ve picked up, partly for my own benefit and hopefully for others too!&lt;/p&gt;
+
+&lt;h3 id=&quot;using-arrayfrom&quot;&gt;Using Array.from&lt;/h3&gt;
+&lt;p&gt;I have come up against an issue a few times when trying to do something with what I thought was an array but actually turned out to be array like &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeList&lt;/code&gt;. When working with DOM elements, using something like &lt;code class=&quot;highlighter-rouge&quot;&gt;querySelectorAll(&#39;.elements&#39;)&lt;/code&gt; will return an object of the type &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeList&lt;/code&gt; rather than of the type &lt;code class=&quot;highlighter-rouge&quot;&gt;Array&lt;/code&gt;. Some browsers don’t play too well with this when you use functions on the &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeList&lt;/code&gt;. For example until last year using &lt;code class=&quot;highlighter-rouge&quot;&gt;forEach&lt;/code&gt; on a &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeList&lt;/code&gt; in Chrome wouldn’t work, because &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeLists&lt;/code&gt; weren’t iterable like &lt;code class=&quot;highlighter-rouge&quot;&gt;Arrays&lt;/code&gt; are. There are some hacky solutions to converting array like objects to real Arrays but &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.from&lt;/code&gt; makes it simple, readable and concise.&lt;/p&gt;
+
+&lt;p&gt;Let’s say we have a &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeList&lt;/code&gt; called &lt;code class=&quot;highlighter-rouge&quot;&gt;myNodeList&lt;/code&gt;. Simply do &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.from(myNodeList)&lt;/code&gt; and you’ll be returned an &lt;code class=&quot;highlighter-rouge&quot;&gt;Array&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;As browser support for doing things like using &lt;code class=&quot;highlighter-rouge&quot;&gt;forEach&lt;/code&gt; on a &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeList&lt;/code&gt; improves, that particular use case will become less common, however you can still use it in cases such as turning a string into an array of characters, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.from(&#39;Hello&#39;)&lt;/code&gt; would become &lt;code class=&quot;highlighter-rouge&quot;&gt;[&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]&lt;/code&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 05 Jul 2017 10:26:23 +0100</pubDate>
+        <link>http://jtudsbury.com/posts/til/2017/07/05/til-using-array-from.html</link>
+        <guid isPermaLink="true">http://jtudsbury.com/posts/til/2017/07/05/til-using-array-from.html</guid>
+        
+        
+        <category>posts</category>
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>Generic naming in CSS</title>
