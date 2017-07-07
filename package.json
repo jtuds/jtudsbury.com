@@ -2,6 +2,11 @@
   "name": "jekyll-portfolio-site",
   "version": "0.1.0",
   "description": "jtudsbury.com Jekyll site",
+  "scripts":{
+    "serve": "jekyll serve",
+    "build": "jekyll build --config _config-live.yml",
+    "build-local": "jekyll build" 
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "grunt-contrib-cssmin": "^1.0.0",
