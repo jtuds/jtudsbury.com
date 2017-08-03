@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>TIL - Using Array.from | Portfolio of James Tudsbury, Manchester based web developer</title>
-  <meta name="description" content="This is my first attempt at writing post based on something I have learned today (or recently), hence the name TIL. These posts are intended to be short tidb...">
+  <title>TIL - [] === [] // false. What? | Portfolio of James Tudsbury, Manchester based web developer</title>
+  <meta name="description" content="Javascript is weird. Today I learned that the result of [] === [] is not true as you might suspect but is in fact false. To add to the strange, [] == ![] equ...">
 
   <link rel="stylesheet" href="/css/main.css?bust=1501761323">
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700|Hind:300,500' rel='stylesheet' type='text/css'>
-  <link rel="canonical" href="http://jtudsbury.com/posts/til/2017/07/05/til-using-array-from.html">
+  <link rel="canonical" href="http://jtudsbury.com/posts/til/2017/08/03/til-javascript-array-comparator.html">
   <link rel="alternate" type="application/rss+xml" title="James Tudsbury - Web Developer" href="http://jtudsbury.com/feed.xml">
   <link rel="shortcut icon" href="http://jtudsbury.com/favicon_v2.ico" />
 </head>
@@ -61,19 +61,36 @@
 		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
 		  <header class="post-header">
-		    <h1 class="post-title" itemprop="name headline">TIL - Using Array.from</h1>
-		    <p class="post-meta"><time datetime="2017-07-05T10:26:23+01:00" itemprop="datePublished">Jul 5, 2017</time></p>
+		    <h1 class="post-title" itemprop="name headline">TIL - [] === [] // false. What?</h1>
+		    <p class="post-meta"><time datetime="2017-08-03T10:26:23+01:00" itemprop="datePublished">Aug 3, 2017</time></p>
 		  </header>
 
 		  <div class="post-content" itemprop="articleBody">
-		    <p>This is my first attempt at writing post based on something I have learned today (or recently), hence the name TIL. These posts are intended to be short tidbits of learnings and stuff I’ve picked up, partly for my own benefit and hopefully for others too!</p>
+		    <p>Javascript is weird. Today I learned that the result of <code class="highlighter-rouge">[] === []</code> is not <code class="highlighter-rouge">true</code> as you might suspect but is in fact <code class="highlighter-rouge">false</code>. To add to the strange, <code class="highlighter-rouge">[] == ![]</code> equals <code class="highlighter-rouge">true</code>. What?</p>
 
-<h3 id="using-arrayfrom">Using Array.from</h3>
-<p>I have come up against an issue a few times when trying to do something with what I thought was an array but actually turned out to be array like <code class="highlighter-rouge">NodeList</code>. When working with DOM elements, using something like <code class="highlighter-rouge">querySelectorAll('.elements')</code> will return an object of the type <code class="highlighter-rouge">NodeList</code> rather than of the type <code class="highlighter-rouge">Array</code>. Some browsers don’t play too well with this when you use functions on the <code class="highlighter-rouge">NodeList</code>. For example until last year using <code class="highlighter-rouge">forEach</code> on a <code class="highlighter-rouge">NodeList</code> in Chrome wouldn’t work, because <code class="highlighter-rouge">NodeLists</code> weren’t iterable like <code class="highlighter-rouge">Arrays</code> are. There are some hacky solutions to converting array like objects to real Arrays but <code class="highlighter-rouge">Array.from</code> makes it simple, readable and concise.</p>
+<p>Turns out what is happening when you do <code class="highlighter-rouge">[] === []</code> is that under the hood, this comparison really looks like <code class="highlighter-rouge">new Array() === new Array()</code>. When you see it like that, it becomes a bit clearer why it returns <code class="highlighter-rouge">false</code>. The <code class="highlighter-rouge">new</code> keyword is creating a new instance of an array object for each of the two <code class="highlighter-rouge">[]</code> (array literals). So when asking whether the two are the same with the strict equality <code class="highlighter-rouge">===</code> comparator, they aren’t, they’re two separate instances of an array object.</p>
 
-<p>Let’s say we have a <code class="highlighter-rouge">NodeList</code> called <code class="highlighter-rouge">myNodeList</code>. Simply do <code class="highlighter-rouge">Array.from(myNodeList)</code> and you’ll be returned an <code class="highlighter-rouge">Array</code>.</p>
+<p>In the case of <code class="highlighter-rouge">[] == ![]</code> resulting in <code class="highlighter-rouge">true</code>, what’s happening here is we’re trying to compare an object to a boolean (<code class="highlighter-rouge">![]</code> is equal to <code class="highlighter-rouge">false</code>). So Javascript uses coercion on the values on both the left and right of the comparator until they are the same type. Essentially:</p>
 
-<p>As browser support for doing things like using <code class="highlighter-rouge">forEach</code> on a <code class="highlighter-rouge">NodeList</code> improves, that particular use case will become less common, however you can still use it in cases such as turning a string into an array of characters, e.g. <code class="highlighter-rouge">Array.from('Hello')</code> would become <code class="highlighter-rouge">["H", "e", "l", "l", "o"]</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>=&gt; []==![]
+
+=&gt; []==false // Type conversion by the statement itself
+
+=&gt; []==0 // To number of right operand
+
+=&gt; ""==0 // To Primitive call for Array which will in this case convert to empty string
+
+=&gt; 0==0 // To number call of "" which is 0
+
+=&gt; true
+</code></pre>
+</div>
+
+<p>(the above snippet is courtesy of <a href="https://stackoverflow.com/a/45444600/4969010">Stack Overflow</a>)</p>
+
+<p>So as you can see, both <code class="highlighter-rouge">[]</code> and <code class="highlighter-rouge">![]</code> get coerced to 0, making <code class="highlighter-rouge">[] == ![]</code> equal <code class="highlighter-rouge">true</code>. If we were to use the strict equals comparator (<code class="highlighter-rouge">===</code>), coercion wouldn’t occur and we’d get <code class="highlighter-rouge">false</code>. There’s an argument for never using <code class="highlighter-rouge">==</code> but that’s not for this post!</p>
+
+<p>Little bits of weirdness like this are nice ways to learn a little more about Javascript and I’d encourage anyone trying to learn how Javascript works along with all its caveats to open up the console and just play around with stuff.</p>
 
 		  </div>
 

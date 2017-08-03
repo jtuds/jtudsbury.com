@@ -5,9 +5,48 @@
     <description>Portfolio of Manchester based front end web developer James Tudsbury.</description>
     <link>http://jtudsbury.com/</link>
     <atom:link href="http://jtudsbury.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 06 Jul 2017 08:55:00 +0100</pubDate>
-    <lastBuildDate>Thu, 06 Jul 2017 08:55:00 +0100</lastBuildDate>
+    <pubDate>Thu, 03 Aug 2017 12:55:23 +0100</pubDate>
+    <lastBuildDate>Thu, 03 Aug 2017 12:55:23 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>TIL - [] === [] // false. What?</title>
+        <description>&lt;p&gt;Javascript is weird. Today I learned that the result of &lt;code class=&quot;highlighter-rouge&quot;&gt;[] === []&lt;/code&gt; is not &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; as you might suspect but is in fact &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;. To add to the strange, &lt;code class=&quot;highlighter-rouge&quot;&gt;[] == ![]&lt;/code&gt; equals &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;. What?&lt;/p&gt;
+
+&lt;p&gt;Turns out what is happening when you do &lt;code class=&quot;highlighter-rouge&quot;&gt;[] === []&lt;/code&gt; is that under the hood, this comparison really looks like &lt;code class=&quot;highlighter-rouge&quot;&gt;new Array() === new Array()&lt;/code&gt;. When you see it like that, it becomes a bit clearer why it returns &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;. The &lt;code class=&quot;highlighter-rouge&quot;&gt;new&lt;/code&gt; keyword is creating a new instance of an array object for each of the two &lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt; (array literals). So when asking whether the two are the same with the strict equality &lt;code class=&quot;highlighter-rouge&quot;&gt;===&lt;/code&gt; comparator, they aren’t, they’re two separate instances of an array object.&lt;/p&gt;
+
+&lt;p&gt;In the case of &lt;code class=&quot;highlighter-rouge&quot;&gt;[] == ![]&lt;/code&gt; resulting in &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;, what’s happening here is we’re trying to compare an object to a boolean (&lt;code class=&quot;highlighter-rouge&quot;&gt;![]&lt;/code&gt; is equal to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;). So Javascript uses coercion on the values on both the left and right of the comparator until they are the same type. Essentially:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;=&amp;gt; []==![]
+
+=&amp;gt; []==false // Type conversion by the statement itself
+
+=&amp;gt; []==0 // To number of right operand
+
+=&amp;gt; &quot;&quot;==0 // To Primitive call for Array which will in this case convert to empty string
+
+=&amp;gt; 0==0 // To number call of &quot;&quot; which is 0
+
+=&amp;gt; true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(the above snippet is courtesy of &lt;a href=&quot;https://stackoverflow.com/a/45444600/4969010&quot;&gt;Stack Overflow&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;So as you can see, both &lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;![]&lt;/code&gt; get coerced to 0, making &lt;code class=&quot;highlighter-rouge&quot;&gt;[] == ![]&lt;/code&gt; equal &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;. If we were to use the strict equals comparator (&lt;code class=&quot;highlighter-rouge&quot;&gt;===&lt;/code&gt;), coercion wouldn’t occur and we’d get &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;. There’s an argument for never using &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; but that’s not for this post!&lt;/p&gt;
+
+&lt;p&gt;Little bits of weirdness like this are nice ways to learn a little more about Javascript and I’d encourage anyone trying to learn how Javascript works along with all its caveats to open up the console and just play around with stuff.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Aug 2017 10:26:23 +0100</pubDate>
+        <link>http://jtudsbury.com/posts/til/2017/08/03/til-javascript-array-comparator.html</link>
+        <guid isPermaLink="true">http://jtudsbury.com/posts/til/2017/08/03/til-javascript-array-comparator.html</guid>
+        
+        
+        <category>posts</category>
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>TIL - Using Array.from</title>
