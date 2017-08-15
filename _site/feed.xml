@@ -5,9 +5,42 @@
     <description>Portfolio of Manchester based front end web developer James Tudsbury.</description>
     <link>http://jtudsbury.com/</link>
     <atom:link href="http://jtudsbury.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Aug 2017 12:55:23 +0100</pubDate>
-    <lastBuildDate>Thu, 03 Aug 2017 12:55:23 +0100</lastBuildDate>
+    <pubDate>Tue, 15 Aug 2017 17:58:58 +0100</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 17:58:58 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Vanilla Javascript toggle attribute helper</title>
+        <description>&lt;p&gt;Recently when needing to toggle the state of a data attribute using plain vanilla Javascript I found that though there was some articles and helper functions out there for toggling classes, there wasn’t any for data attributes, which I imagine are quite common. This is a very straightforward piece of code (more straightforward than toggling classes) but is really useful and it’s handy not to have to write these things from scratch every time so hopefully people can find this and use it.&lt;/p&gt;
+
+&lt;h3 id=&quot;toggleattribute&quot;&gt;toggleAttribute&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function toggleAttribute (el, attr, val) {
+	if (el.hasAttribute(attr) &amp;amp;&amp;amp; el.getAttribute(attr) === val) {
+		el.removeAttribute(attr);
+	} else {
+		el.setAttribute(attr, val);
+	}
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Here’s an example of how you might call that function&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;toggleAttribute(document.querySelector(&#39;.my-element&#39;), &#39;data-gonna-toggle&#39;, &#39;true&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;That will result in the element with a class of &lt;code class=&quot;highlighter-rouge&quot;&gt;.my-element&lt;/code&gt; having the attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;data-gonna-toggle&lt;/code&gt; toggle between the value being &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; or simply empty.&lt;/p&gt;
+
+&lt;p&gt;This could be expanded further to toggle between two values, e.g. true and false. Though if true doesn’t exist you should be able to assume that the value is false, so a better example would be toggling between something non boolean such as “red” and “blue”. The function doesn’t currently cater for this as currently it just removes the attribute rather than replacing it with a different value but it may be something I look to do in the future.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Aug 2017 10:26:23 +0100</pubDate>
+        <link>http://jtudsbury.com/posts/2017/08/15/toggle-attribute-plain-javascript.html</link>
+        <guid isPermaLink="true">http://jtudsbury.com/posts/2017/08/15/toggle-attribute-plain-javascript.html</guid>
+        
+        
+        <category>posts</category>
+        
+      </item>
     
       <item>
         <title>TIL - [] === [] // false. What?</title>
