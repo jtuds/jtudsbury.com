@@ -10,7 +10,7 @@ title: James Tudsbury - Web Developer
 email: james@jtudsbury.com
 description: Portfolio of Manchester based front end web developer James Tudsbury.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jtudsbury.com" # the base hostname & protocol for your site
+url: "https://jtudsbury.com" # the base hostname & protocol for your site
 twitter_username: jtuds
 github_username:  jtuds
 
