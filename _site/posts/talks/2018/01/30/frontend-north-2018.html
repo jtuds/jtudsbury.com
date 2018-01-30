@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Frontend North 2018 | Portfolio of James Tudsbury, Manchester based web developer</title>
-  <meta name="description" content="The week before last I attended my second FrontEndNorth conference since the 2015 edition took place in a small lecture hall at Manchester Met Uni. This time...">
+  <meta name="description" content="Frontend North 2018">
 
-  <link rel="stylesheet" href="/css/main.css?bust=1517305261">
+  <link rel="stylesheet" href="/css/main.css?bust=1517305423">
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700|Hind:300,500' rel='stylesheet' type='text/css'>
   <link rel="canonical" href="https://jtudsbury.com/posts/talks/2018/01/30/frontend-north-2018.html">
   <link rel="alternate" type="application/rss+xml" title="James Tudsbury - Web Developer" href="https://jtudsbury.com/feed.xml">
@@ -66,9 +66,11 @@
 		  </header>
 
 		  <div class="post-content" itemprop="articleBody">
-		    <p>The week before last I attended my second FrontEndNorth conference since the 2015 edition took place in a small lecture hall at Manchester Met Uni. This time around I travelled to Sheffield for a much grander and busier version hosted at Sheffield City Hall. Here are my key takeaways and observations from a selection of the talks.</p>
+		    <h1 id="frontend-north-2018">Frontend North 2018</h1>
 
-<h1 id="night-of-the-living-styleguides---sarah-semark-sarahsemarkhttpstwittercomsarahsemark">Night of the living styleguides - Sarah Semark <a href="https://twitter.com/sarahsemark">@sarahsemark</a></h1>
+<p>The week before last I attended my second FrontEndNorth conference since the 2015 edition took place in a small lecture hall at Manchester Met Uni. This time around I travelled to Sheffield for a much grander and busier version hosted at Sheffield City Hall. Here are my key takeaways and observations from a selection of the talks.</p>
+
+<h2 id="night-of-the-living-styleguides---sarah-semark-sarahsemarkhttpstwittercomsarahsemark">Night of the living styleguides - Sarah Semark <a href="https://twitter.com/sarahsemark">@sarahsemark</a></h2>
 <p>This talk was an introduction to the concept of styleguides and the benefits they can bring to a website and even a whole business. Sarah explained what a styleguide is and what one should contain in order to be useful. She made a point of distinguishing between a styleguide and a living styleguide. The latter being something that developers and designers constantly evolve and refer to as a product changes rather than doing it once and leaving it to rot in a corner.</p>
 
 <p>I have been sold on the idea of styleguides for a while but have always found the sticking point to be the “living” part of them. It is easy to create a styleguide during a build process but it is much harder to make sure that it is maintained and updated over time to reflect changes to the system. There are a number of tools to assist with this as Sarah explained, ranging from the largely manual to the mostly automated. The most appealing tool for me is writing documentation within your SASS (or whatever you’re using) files as you make changes to the styles, this documentation, often written in a markdown format, is processed by a styleguide tool and outputs a lovely visual styleguide. This is the closest I think you can get to a living styleguide, but it is still so easy for a developer to write or change styles and simply not update the documentation accordingly. This could indicate that the key to a living styleguide isn’t the tooling but the process behind it that ensures developers and designers are not only updating it, but using it a first port of call for development and design changes. Rather than it being an afterthought, it should be the source of truth for the design system. I would couple this with some visual regression testing that fails on any changes to the styleguide, further ensuring that your styleguide is part of the system and not just a thing somewhere nobody ever looks at.</p>
@@ -77,18 +79,18 @@
 
 <p>Sarah ended the talk with some useful tips on the use of colour which was a nice diversion in to the design side of frontend when it can so often be dominated by the technical aspects.</p>
 
-<h1 id="offline-first-apps---lorna-mitchell-lornajanehttpstwittercomlornajane">Offline First Apps - Lorna Mitchell <a href="https://twitter.com/lornajane">@lornajane</a></h1>
+<h2 id="offline-first-apps---lorna-mitchell-lornajanehttpstwittercomlornajane">Offline First Apps - Lorna Mitchell <a href="https://twitter.com/lornajane">@lornajane</a></h2>
 <p>This talk was about offline first apps, their usefulness, and the realisation for me that they aren’t all that hard to implement (kind of)…
 First of all, Lorna spoke about how offline first doesn’t just mean apps for scenarios where there simply is no Internet such as parts of the developing world. Whilst it can mean that, it also applies to situations readers of this blog will probably be more familiar with, like spotty connections on the train. She explained the importance of apps having graceful fallbacks in their offline state rather than just bombing out and refusing to work.</p>
 
 <p>There was a really useful introduction to building a simple offline first web app and I was surprised by how relatively simple this was to implement, mainly thanks to a tool called <a href="https://pouchdb.com/">PouchDB</a>. PouchDB is a client side tool that does all the heavy lifting of storing and syncing with a backend database (CouchDB). Pouch looked great to work with and deals with all the cross browser issues and the implementation detail, leaving you to just tell it what to store and sync. My main takeaway from this talk is to have a go at using PouchDB and get something built with it.</p>
 
-<h1 id="reacting-to-change---ben-cooper-off-the-twitter-grid">Reacting to change - Ben Cooper (off the Twitter grid)</h1>
+<h2 id="reacting-to-change---ben-cooper-off-the-twitter-grid">Reacting to change - Ben Cooper (off the Twitter grid)</h2>
 <p>This talk was focused on different design patterns and paradigms that exist within software engineering, particularly in the context of Javascript. It was quite an example heavy talk but it inspired me to think about and play around with functional programming techniques more in the future. I agreed with his idea that imperative programming, that a lot of us and certainly myself seem to have learnt, is more about telling the machine how and when to do something whereas declarative is a more natural human approach of just telling it what to do, but not defining the how.</p>
 
 <p>My key takeway from this talk, having experimented with functional programming ideas and libraries like RXJS, was to make sure to open your mind and relinquish control when learning these ideas. They are completely different conceptually from what many of us have learnt before and require us to let go of what we already know in order to grasp new ideas of paradigms.</p>
 
-<h1 id="agile-working-in-a-slow-moving-world---chris-marsh-chris5marshhttpstwittercomchris5marsh">Agile working in a slow moving world - Chris Marsh <a href="https://twitter.com/chris5marsh">@chris5marsh</a></h1>
+<h2 id="agile-working-in-a-slow-moving-world---chris-marsh-chris5marshhttpstwittercomchris5marsh">Agile working in a slow moving world - Chris Marsh <a href="https://twitter.com/chris5marsh">@chris5marsh</a></h2>
 <p>Chris works at the University of York and has been attempting to implement some of the ideas and approaches of Agile in a large and slow moving organisation, typical for the likes of universities. Though I don’t myself work in a large or slow moving organisation, I still took some takeaways about ways of working well within teams:</p>
 
 <ul>
@@ -98,7 +100,7 @@ First of all, Lorna spoke about how offline first doesn’t just mean apps for s
   <li><a href="https://en.wikipedia.org/wiki/Broken_windows_theory">Broken windows theory</a> - fix things small and early to prevent them becoming bigger issues than they need to be.</li>
 </ul>
 
-<h1 id="build-anything-with-react---jani-evakallio-jevakalliohttpstwittercomjevakallio">Build anything with React - Jani Evakallio <a href="https://twitter.com/jevakallio">@jevakallio</a></h1>
+<h2 id="build-anything-with-react---jani-evakallio-jevakalliohttpstwittercomjevakallio">Build anything with React - Jani Evakallio <a href="https://twitter.com/jevakallio">@jevakallio</a></h2>
 <p>This was my favourite talk of the day and explored the vast possibilities of building stuff with the React ecosystem. There was a general theme of React throughout the day which was an indicator of just how popular and widely used it is at the moment, but one thing I didn’t realise was the vast amount of ways it can be used in so many different scenarios and with so much different tech. “React all the things” as one slide put it.</p>
 
 <p>This talk was basically a summary of some of the possibilities of writing applications in React. The simple version most people will be familiar with is writing web applications. The other example that is probably well known is React Native, using React to write applications for devices such as Android and iOS. After these examples is where it got interesting and Jani gave some examples of the extent to which you can use React to build things for different technology. These included; virtual reality, augmented reality, game development, desktop apps, Microsoft Word, Sketch, hardware, and even blockchain (tongue in cheek).</p>
