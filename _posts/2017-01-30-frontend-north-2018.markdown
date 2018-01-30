@@ -5,8 +5,6 @@ date:   2018-01-30 08:12:53 +0000
 categories: posts talks
 ---
 
-# Frontend North 2018
-
 The week before last I attended my second FrontEndNorth conference since the 2015 edition took place in a small lecture hall at Manchester Met Uni. This time around I travelled to Sheffield for a much grander and busier version hosted at Sheffield City Hall. Here are my key takeaways and observations from a selection of the talks.
 
 ## Night of the living styleguides - Sarah Semark [@sarahsemark](https://twitter.com/sarahsemark)
