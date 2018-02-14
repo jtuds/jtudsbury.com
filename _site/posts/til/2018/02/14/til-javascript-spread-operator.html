@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TIL - The Javascript spread operator | Portfolio of James Tudsbury, Manchester based web developer</title>
+  <meta name="description" content="The Javascript spread operatorThe spread operator is one of those recent additions to Javascript that I’ve heard people mention and seen written on blogs but...">
+
+  <link rel="stylesheet" href="/css/main.css?bust=1518627604">
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,700|Hind:300,500' rel='stylesheet' type='text/css'>
+  <link rel="canonical" href="http://127.0.0.1:4000/posts/til/2018/02/14/til-javascript-spread-operator.html">
+  <link rel="alternate" type="application/rss+xml" title="James Tudsbury - Web Developer" href="http://127.0.0.1:4000/feed.xml">
+  <link rel="shortcut icon" href="https://jtudsbury.com/favicon_v2.ico" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  
+    <a class="icon icon--home-yellow home-link" href="http://127.0.0.1:4000"><span class="visuallyhidden">Home</span></a>
+  
+
+  <div class="hero">
+
+    <div class="hero__text-wrapper">
+      <div class="wrapper">
+        <h1 class="hero__text">James Tudsbury
+          <div class="rotating-words">
+            <span>Front end developer<span class="visuallyhidden">, </span></span>
+            <span>Backend dabbler<span class="visuallyhidden">, </span></span>
+            <span>User behaviour enthusiast<span class="visuallyhidden">, </span></span>
+            <span>Designer<span class="visuallyhidden">, </span></span>
+            <span>Web lover<span class="visuallyhidden">, </span></span>
+            <span>Mountain jumper<span class="visuallyhidden">.</span></span>
+          </div>
+        </h1>
+      </div><!--/.wrapper -->
+    </div><!--/.hero__text-wrapper -->
+
+  </div><!--/.hero -->
+
+  
+    <div class="site-nav-wrapper">
+      <nav class="site-nav site-nav--single">
+        <a class="site-nav__link" href="http://127.0.0.1:4000/">Back to home</a>
+      </nav>
+    </div><!--/.site-nav-wrapper -->
+  
+
+</header>
+
+
+    <div class="page-content">
+      <div class="panel">
+	<div class="wrapper">
+		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+		  <header class="post-header">
+		    <h1 class="post-title" itemprop="name headline">TIL - The Javascript spread operator</h1>
+		    <p class="post-meta"><time datetime="2018-02-14T15:23:23+00:00" itemprop="datePublished">Feb 14, 2018</time></p>
+		  </header>
+
+		  <div class="post-content" itemprop="articleBody">
+		    <h3 id="the-javascript-spread-operator">The Javascript spread operator</h3>
+<p>The spread operator is one of those recent additions to Javascript that I’ve heard people mention and seen written on blogs but never actually got chance to use. I’ve looked it up a couple of times but as is usually the case with this kind of the thing, the docs just go straight over my head. It’s difficult to see what something is for without context or a use case. Yesterday I came across a use case in one of my projects. I was setting up event listeners on some form elements but the elements were in the form of a <code class="highlighter-rouge">NodeList</code>. I’ve written about using <code class="highlighter-rouge">Array.from</code> before to solve this issue and change the <code class="highlighter-rouge">NodeList</code> to an <code class="highlighter-rouge">Array</code> but of of curiosity I had a look around to see if anyone had any other solutions other than the more hackier feeling ones I’ve seen in the past. I came across somebody suggesting using the spread operator and by having the context around why I might use it, it suddenly made sense what this new feature could do.</p>
+
+<p>It helps me to think of the spread operator almost like the expand operator. It takes a collection of stuff and expands (spreads) it out. Here is how I used spread in my example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>const inputs = document.querySelectorAll('input'); // returns a NodeList
+[...inputs].map(input =&gt; {
+	Helpers.addEvent(input, 'focus', function() {
+		handleFocus(input);
+	});
+});
+</code></pre>
+</div>
+
+<p>The key bit to look at here is <code class="highlighter-rouge">[...inputs]</code>. The square brackets mean that whatever is inside of them is going to be turned in to an array, which is what I need to map over. The spread operator (<code class="highlighter-rouge">...</code>) inside of the square brackets expands the <code class="highlighter-rouge">NodeList</code>, going over each item one by one, with each item in the list being inserted as an item in the array. That’s pretty much it.</p>
+
+<p>Once you understand that the spread operator is just a tool for expanding values you can start to see where it could be used. Take this example from MDN:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var parts = ['shoulders', 'knees']; 
+var lyrics = ['head', ...parts, 'and', 'toes']; 
+// ["head", "shoulders", "knees", "and", "toes"]
+</code></pre>
+</div>
+
+<p>You can see how the spread operator has expanded the <code class="highlighter-rouge">parts</code> array and slotted each of the items in to the <code class="highlighter-rouge">lyrics</code> array. Without the spread operator you might do something like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var parts = ['shoulders', 'knees']; 
+var lyrics = ['head'];
+parts.forEach(function(value) {
+	lyrics.push(value);
+});
+lyrics.push('and', 'toes');
+// ["head", "shoulders", "knees", "and", "toes"]
+</code></pre>
+</div>
+
+<p>Which is much more convoluted and imperative.</p>
+
+		  </div>
+
+		</article>
+	</div><!-- end .wrapper -->
+</div><!-- end .panel -->
+
+    </div>
+
+    
+  <nav class="site-nav site-nav--footer">
+      <a class="site-nav__link" href="#">Back to top</a><a class="site-nav__link" href="http://127.0.0.1:4000/">Back to home</a>
+    </nav>
+
+
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <p>Email: <a href="mailto:james@jtudsbury.com">james@jtudsbury.com</a> | Twitter: <a href="https://twitter.com/@jtuds">@jtuds</a> | Icons by <a href="http://www.freepik.com" title="Freepik">Freepik</a> and <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-34770509-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+
+</html>
