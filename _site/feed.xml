@@ -3,10 +3,10 @@
   <channel>
     <title>James Tudsbury - Web Developer</title>
     <description>Portfolio of Manchester based front end web developer James Tudsbury.</description>
-    <link>http://127.0.0.1:4000/</link>
-    <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Feb 2018 17:00:04 +0000</pubDate>
-    <lastBuildDate>Wed, 14 Feb 2018 17:00:04 +0000</lastBuildDate>
+    <link>https://jtudsbury.com/</link>
+    <atom:link href="https://jtudsbury.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 14 Feb 2018 17:00:53 +0000</pubDate>
+    <lastBuildDate>Wed, 14 Feb 2018 17:00:53 +0000</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -50,8 +50,8 @@ lyrics.push(&#39;and&#39;, &#39;toes&#39;);
 &lt;p&gt;Which is much more convoluted and imperative.&lt;/p&gt;
 </description>
         <pubDate>Wed, 14 Feb 2018 15:23:23 +0000</pubDate>
-        <link>http://127.0.0.1:4000/posts/til/2018/02/14/til-javascript-spread-operator.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/posts/til/2018/02/14/til-javascript-spread-operator.html</guid>
+        <link>https://jtudsbury.com/posts/til/2018/02/14/til-javascript-spread-operator.html</link>
+        <guid isPermaLink="true">https://jtudsbury.com/posts/til/2018/02/14/til-javascript-spread-operator.html</guid>
         
         
         <category>posts</category>
@@ -104,8 +104,8 @@ First of all, Lorna spoke about how offline first doesn’t just mean apps for s
 &lt;p&gt;This got me wondering about the future potential of writing in React. Could renderers be written for healthcare hardware for example? What would it look like if that were the case and the vast number of open source orientated React/JS developers wrote apps for it? It’s an exciting idea and can be summed up with the phrase, “learn once, write anywhere”.&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 Jan 2018 08:12:53 +0000</pubDate>
-        <link>http://127.0.0.1:4000/posts/talks/2018/01/30/frontend-north-2018.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/posts/talks/2018/01/30/frontend-north-2018.html</guid>
+        <link>https://jtudsbury.com/posts/talks/2018/01/30/frontend-north-2018.html</link>
+        <guid isPermaLink="true">https://jtudsbury.com/posts/talks/2018/01/30/frontend-north-2018.html</guid>
         
         
         <category>posts</category>
@@ -139,8 +139,8 @@ First of all, Lorna spoke about how offline first doesn’t just mean apps for s
 &lt;p&gt;This could be expanded further to toggle between two values, e.g. true and false. Though if true doesn’t exist you should be able to assume that the value is false, so a better example would be toggling between something non boolean such as “red” and “blue”. The function doesn’t currently cater for this as currently it just removes the attribute rather than replacing it with a different value but it may be something I look to do in the future.&lt;/p&gt;
 </description>
         <pubDate>Tue, 15 Aug 2017 10:26:23 +0100</pubDate>
-        <link>http://127.0.0.1:4000/posts/2017/08/15/toggle-attribute-plain-javascript.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/posts/2017/08/15/toggle-attribute-plain-javascript.html</guid>
+        <link>https://jtudsbury.com/posts/2017/08/15/toggle-attribute-plain-javascript.html</link>
+        <guid isPermaLink="true">https://jtudsbury.com/posts/2017/08/15/toggle-attribute-plain-javascript.html</guid>
         
         
         <category>posts</category>
@@ -176,8 +176,8 @@ First of all, Lorna spoke about how offline first doesn’t just mean apps for s
 &lt;p&gt;Little bits of weirdness like this are nice ways to learn a little more about Javascript and I’d encourage anyone trying to learn how Javascript works along with all its caveats to open up the console and just play around with stuff.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Aug 2017 10:26:23 +0100</pubDate>
-        <link>http://127.0.0.1:4000/posts/til/2017/08/03/til-javascript-array-comparator.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/posts/til/2017/08/03/til-javascript-array-comparator.html</guid>
+        <link>https://jtudsbury.com/posts/til/2017/08/03/til-javascript-array-comparator.html</link>
+        <guid isPermaLink="true">https://jtudsbury.com/posts/til/2017/08/03/til-javascript-array-comparator.html</guid>
         
         
         <category>posts</category>
@@ -198,8 +198,8 @@ First of all, Lorna spoke about how offline first doesn’t just mean apps for s
 &lt;p&gt;As browser support for doing things like using &lt;code class=&quot;highlighter-rouge&quot;&gt;forEach&lt;/code&gt; on a &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeList&lt;/code&gt; improves, that particular use case will become less common, however you can still use it in cases such as turning a string into an array of characters, e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;Array.from(&#39;Hello&#39;)&lt;/code&gt; would become &lt;code class=&quot;highlighter-rouge&quot;&gt;[&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]&lt;/code&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 05 Jul 2017 10:26:23 +0100</pubDate>
-        <link>http://127.0.0.1:4000/posts/til/2017/07/05/til-using-array-from.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/posts/til/2017/07/05/til-using-array-from.html</guid>
+        <link>https://jtudsbury.com/posts/til/2017/07/05/til-using-array-from.html</link>
+        <guid isPermaLink="true">https://jtudsbury.com/posts/til/2017/07/05/til-using-array-from.html</guid>
         
         
         <category>posts</category>
@@ -349,8 +349,8 @@ First of all, Lorna spoke about how offline first doesn’t just mean apps for s
 &lt;p&gt;If you’re not finding your class names difficult to name, scale, or reuse then this solution is probably irrelevant. But if you are then it could be a good technique to try out and experiment with. Good luck!&lt;/p&gt;
 </description>
         <pubDate>Wed, 13 Jul 2016 19:15:23 +0100</pubDate>
-        <link>http://127.0.0.1:4000/posts/2016/07/13/generic-naming-in-css.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/posts/2016/07/13/generic-naming-in-css.html</guid>
+        <link>https://jtudsbury.com/posts/2016/07/13/generic-naming-in-css.html</link>
+        <guid isPermaLink="true">https://jtudsbury.com/posts/2016/07/13/generic-naming-in-css.html</guid>
         
         
         <category>posts</category>
@@ -404,8 +404,8 @@ First of all, Lorna spoke about how offline first doesn’t just mean apps for s
 
 </description>
         <pubDate>Sun, 29 May 2016 14:24:23 +0100</pubDate>
-        <link>http://127.0.0.1:4000/posts/talks/2016/05/29/upfront-conference-2016-my-takeaways.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/posts/talks/2016/05/29/upfront-conference-2016-my-takeaways.html</guid>
+        <link>https://jtudsbury.com/posts/talks/2016/05/29/upfront-conference-2016-my-takeaways.html</link>
+        <guid isPermaLink="true">https://jtudsbury.com/posts/talks/2016/05/29/upfront-conference-2016-my-takeaways.html</guid>
         
         
         <category>posts</category>
