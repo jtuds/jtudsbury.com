@@ -5,36 +5,27 @@
     <description>Portfolio of Manchester based front end web developer James Tudsbury.</description>
     <link>https://jtudsbury.com/</link>
     <atom:link href="https://jtudsbury.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 May 2018 15:48:14 +0100</pubDate>
-    <lastBuildDate>Wed, 02 May 2018 15:48:14 +0100</lastBuildDate>
+    <pubDate>Wed, 02 May 2018 15:52:01 +0100</pubDate>
+    <lastBuildDate>Wed, 02 May 2018 15:52:01 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>Know your history to know your present</title>
-        <description>&lt;p&gt;Dev filled with buzzwords and concepts and stuff
-Can be confusing and feel like there’s much to leanr
-Boil it down a bit
-Look at where the term comes from and why and it gives context to its current usage&lt;/p&gt;
-
-&lt;p&gt;Saga = turning long lived transactions into a series (saga) of transactions
-- means resources for LLT aren’t held for as long and everything is executed partially&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mention the redux=saga docs has background&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As a web developer you are constantly bombarded with buzzwords, new concepts, and ideas. It’s hard to not feel overwhelmed sometimes with all of the different things there are to know. It’s even harder when the very names of these things don’t even seem to make sense. I often find myself looking at a new concept, technique or tool and before I can even begin to learn about it I sit confused about what it even is or does and often because of how it is named.&lt;/p&gt;
+        <description>&lt;p&gt;As a web developer you are constantly bombarded with buzzwords, new concepts, and ideas. It’s hard to not feel overwhelmed sometimes with all of the different things there are to know. It’s even harder when the very names of these things don’t even seem to make sense. I often find myself looking at a new concept, technique or tool and before I can even begin to learn about it I sit confused about what it even is or does and often because of how it is named.&lt;/p&gt;
 
 &lt;p&gt;This most recently happened to me when experimenting with Redux and more specifically Redux-Saga. In an effort to work out what it was and why I might want or need to use it, I headed to the docs, and though they’re good, in-depth docs, I still struggled to really understand what the tool was for, and more so why on Earth it was called “Saga”. I find that I understand concepts better when I fully understand why they exist and the thinking behind them. I’m sure I could have started to play around with Redux-Saga and I’d find situations where it helped me achieve some goal, but it’d forever nag me that I didn’t quite understand the full context of it. So I decided to find out exactly why it was called “Saga”…&lt;/p&gt;
 
+&lt;h3 id=&quot;breaking-down-the-buzzwords&quot;&gt;Breaking down the buzzwords&lt;/h3&gt;
 &lt;p&gt;A quick bit of searching led me to discover the phrase was originally coined by Hector Garcaa-Molrna in a paper written at Princeton University, aptly named “Sagas”. This felt like a good start. It’s not just a random name but somebody decided to name it after this for a reason. I looked at the abstract and introduction to the paper, he explains an issue with “long-lived transactions” in that they can hog database resources and prevent shorter transactions from executing in good time. Based on this he proposes a pattern, called a saga, in which these long-lived transactions can be executed as a sequence of transactions, interleaved with other shorter transactions, meaning the shorter ones have many more opportunities to complete without having to wait as long to do so.&lt;/p&gt;
 
 &lt;p&gt;To make that a big simpler, you can think about what a saga is. One definition is, “a long, involved story, account, or series of incidents.”. So a saga applied to this context is just a way to imagine a resource heavy operation being broken up into a series of related operations. Each individual one taking less time to complete than if they were one complete whole, but still, when applied together, tell the whole story.&lt;/p&gt;
 
 &lt;p&gt;So now this kind of makes sense to me. A saga is just a useful name somebody gave to the concept of breaking down long-lived transactions. Armed with this knowledge, when I read back the documentation on Redux-Saga it made a lot more sense now I had some wider context. It doesn’t seem to me like the original definition directly maps to how it is applied in Redux, but I can see why the name is the same. As far as I can see, Redux-Saga is a set of tools for managing long term processes and side effects.&lt;/p&gt;
 
+&lt;h3 id=&quot;it-works-in-different-scenarios&quot;&gt;It works in different scenarios&lt;/h3&gt;
 &lt;p&gt;Take another example: using &lt;code class=&quot;highlighter-rouge&quot;&gt;super()&lt;/code&gt; in ES6. As a frontend developer, Javascript is my main programming language and in the last couple of years I have focused on learning about the prototypal nature of it. Couple that with no computer science background and I don’t automatically have some of the obvious programming concepts nailed down. So when I first saw &lt;code class=&quot;highlighter-rouge&quot;&gt;super()&lt;/code&gt; when using React, sure I could work out the general idea of what it was doing just by where in the class it was required and if I look up the Javascript docs there is an ok explanation, but why is it called super? What exactly is going on?. Could I not call &lt;code class=&quot;highlighter-rouge&quot;&gt;super()&lt;/code&gt; sometimes? If not, when not? And why? Taking the approach I did with React-Saga, I did some quick searching and found that super just refers to “superclasses”, or “base classes”, or “parent classes”. There isn’t anything super about it. You could equally call it &lt;code class=&quot;highlighter-rouge&quot;&gt;callTheParentClassHere()&lt;/code&gt;. That’d make more sense to me, but it’s not quite as succinct, so doing some quick research helps to clear everything up.&lt;/p&gt;
 
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;You don’t always need to fully grasp a concept or tool in order to apply it or use it. But when you do have a good grasp, you’re better equipped to understand the nuances of how and when to apply it. I’ve found that knowing your history is a great way to help you understand the present.&lt;/p&gt;
 </description>
         <pubDate>Wed, 02 May 2018 10:26:23 +0100</pubDate>
